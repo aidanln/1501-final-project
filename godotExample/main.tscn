@@ -23,7 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.2, 0.254902, 0.356863, 1)
+color = Color(0.0941176, 0.145098, 0.168627, 1)
 
 [node name="Player" parent="." instance=ExtResource("2_gnskr")]
 
@@ -34,10 +34,10 @@ wait_time = 2.0
 one_shot = true
 
 [node name="StartPosition" type="Marker2D" parent="."]
-position = Vector2(320, 650)
+position = Vector2(960, 800)
 
 [node name="MobPath" type="Path2D" parent="."]
-scale = Vector2(1, 0.99)
+scale = Vector2(1, 1)
 curve = SubResource("Curve2D_qg0qm")
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
