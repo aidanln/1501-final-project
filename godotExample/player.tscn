@@ -35,7 +35,10 @@ animations = [{
 radius = 54.0
 height = 136.0
 
-[node name="Player" type="Area2D"]
+[node name="Player" type="CharacterBody2D"]
+z_index = 1
+y_sort_enabled = true
+collision_mask = 2
 script = ExtResource("1_60gqt")
 metadata/_edit_group_ = true
 
@@ -48,4 +51,6 @@ animation = &"up"
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CapsuleShape2D_vss70")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+position_smoothing_enabled = true
