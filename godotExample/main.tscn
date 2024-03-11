@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://124rp1mj0ued"]
+[gd_scene load_steps=9 format=3 uid="uid://124rp1mj0ued"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_5d0xc"]
 [ext_resource type="PackedScene" uid="uid://cmw085wbs6130" path="res://player.tscn" id="2_gnskr"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bomnm0yy52msj" path="res://hud.tscn" id="4_32njb"]
 [ext_resource type="AudioStream" uid="uid://bounqmxeq50ie" path="res://art/In The Air.mp3" id="5_5u34r"]
 [ext_resource type="AudioStream" uid="uid://b448byoye7ea2" path="res://art/gameover.wav" id="5_683rp"]
+[ext_resource type="PackedScene" uid="uid://d31yavvesmwla" path="res://play_area.tscn" id="7_j8e16"]
 
 [sub_resource type="Curve2D" id="Curve2D_qg0qm"]
 _data = {
@@ -37,7 +38,6 @@ one_shot = true
 position = Vector2(960, 800)
 
 [node name="MobPath" type="Path2D" parent="."]
-scale = Vector2(1, 1)
 curve = SubResource("Curve2D_qg0qm")
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
@@ -51,6 +51,8 @@ volume_db = -4.0
 [node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_683rp")
 volume_db = -2.0
+
+[node name="PlayArea" parent="." instance=ExtResource("7_j8e16")]
 
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
