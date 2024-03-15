@@ -8,15 +8,14 @@
 [ext_resource type="AudioStream" uid="uid://b448byoye7ea2" path="res://art/gameover.wav" id="5_683rp"]
 [ext_resource type="PackedScene" uid="uid://d31yavvesmwla" path="res://play_area.tscn" id="7_j8e16"]
 
-[sub_resource type="Curve2D" id="Curve2D_qg0qm"]
+[sub_resource type="Curve2D" id="Curve2D_fgtdf"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1920, 0, 0, 0, 0, 0, 1920, 1080, 0, 0, 0, 0, 0, 1080, 0, 0, 0, 0, 0, 0)
+"points": PackedVector2Array(0, 0, 0, 0, 648, 560, 0, 0, 0, 0, 3086, -496, 0, 0, 0, 0, 2491, -2517, 0, 0, 0, 0, 2934, -2953, 0, 0, 0, 0, 5165, -2963, 0, 0, 0, 0, 2619, -3082, 0, 0, 0, 0, 2399, -1921, 0, 0, 0, 0, 1475, -1912, 0, 0, 0, 0, 1090, -2552, 0, 0, 0, 0, 1119, -1861, 0, 0, 0, 0, 1372, -1115, 0, 0, 0, 0, 707, -596, 0, 0, 0, 0, 648, 560)
 }
-point_count = 5
+point_count = 13
 
 [node name="Main" type="Node"]
 script = ExtResource("1_5d0xc")
-mob_scene = ExtResource("2_pgsrf")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -35,12 +34,7 @@ wait_time = 2.0
 one_shot = true
 
 [node name="StartPosition" type="Marker2D" parent="."]
-position = Vector2(960, 800)
-
-[node name="MobPath" type="Path2D" parent="."]
-curve = SubResource("Curve2D_qg0qm")
-
-[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
+position = Vector2(6300, 500)
 
 [node name="HUD" parent="." instance=ExtResource("4_32njb")]
 
@@ -53,6 +47,19 @@ stream = ExtResource("5_683rp")
 volume_db = -2.0
 
 [node name="PlayArea" parent="." instance=ExtResource("7_j8e16")]
+
+[node name="Path2D" type="Path2D" parent="."]
+z_index = 1
+position = Vector2(899, 3737)
+curve = SubResource("Curve2D_fgtdf")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(5075.19, -2962.6)
+progress = 7526.44
+rotates = false
+
+[node name="Mob" parent="Path2D/PathFollow2D" instance=ExtResource("2_pgsrf")]
+z_index = 2
 
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
