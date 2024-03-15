@@ -1,15 +1,16 @@
-extends RigidBody2D
+extends CharacterBody2D
+@onready var path_follow = get_parent()
+var speed = 150
+var direction = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# random animation
-	var mob_types = $AnimatedSprite2D.sprite_frames.get_animation_names()
-	$AnimatedSprite2D.play(mob_types[randi() % mob_types.size()])
-
-# called when visible_on_screen_notifier tells us that a mob is off-screen
-func _on_visible_on_screen_notifier_2d_screen_exited():
-	queue_free()
+	$AnimatedSprite2D.play("walk")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	var prepos = path_follow.get_global_position()
+	path_follow.set_progress(path_follow.get_progress() + speed * delta)
+	var pos = path_follow.get_global_position()
+	direction = (pos.angle_to_point(prepos)/3.14)*180
