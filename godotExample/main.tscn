@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cmw085wbs6130" path="res://player.tscn" id="2_gnskr"]
 [ext_resource type="PackedScene" uid="uid://15uvohd5ikfa" path="res://mob.tscn" id="2_pgsrf"]
 [ext_resource type="PackedScene" uid="uid://bomnm0yy52msj" path="res://hud.tscn" id="4_32njb"]
-[ext_resource type="AudioStream" uid="uid://bounqmxeq50ie" path="res://art/In The Air.mp3" id="5_5u34r"]
+[ext_resource type="AudioStream" uid="uid://bicnxy8ngq1wp" path="res://art/more chill ambience.ogg" id="4_ou3kb"]
 [ext_resource type="AudioStream" uid="uid://b448byoye7ea2" path="res://art/gameover.wav" id="5_683rp"]
 [ext_resource type="PackedScene" uid="uid://d31yavvesmwla" path="res://play_area.tscn" id="7_j8e16"]
 
@@ -38,9 +38,9 @@ position = Vector2(6300, 500)
 
 [node name="HUD" parent="." instance=ExtResource("4_32njb")]
 
-[node name="Music" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_5u34r")
-volume_db = -4.0
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ou3kb")
+volume_db = -10.805
 
 [node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_683rp")
