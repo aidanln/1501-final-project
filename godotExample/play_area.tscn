@@ -157,6 +157,7 @@ size = Vector2(913.625, 30)
 collision_layer = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 offset_left = 10.0
 offset_top = 3.0
 offset_right = 1810.0
