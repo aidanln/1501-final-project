@@ -1,12 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://124rp1mj0ued"]
+[gd_scene load_steps=11 format=3 uid="uid://124rp1mj0ued"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_5d0xc"]
+[ext_resource type="Script" path="res://main.gd" id="1_8okua"]
 [ext_resource type="PackedScene" uid="uid://cmw085wbs6130" path="res://player.tscn" id="2_gnskr"]
 [ext_resource type="PackedScene" uid="uid://15uvohd5ikfa" path="res://mob.tscn" id="2_pgsrf"]
 [ext_resource type="PackedScene" uid="uid://bomnm0yy52msj" path="res://hud.tscn" id="4_32njb"]
 [ext_resource type="AudioStream" uid="uid://bounqmxeq50ie" path="res://art/In The Air.mp3" id="5_5u34r"]
 [ext_resource type="AudioStream" uid="uid://b448byoye7ea2" path="res://art/gameover.wav" id="5_683rp"]
 [ext_resource type="PackedScene" uid="uid://d31yavvesmwla" path="res://play_area.tscn" id="7_j8e16"]
+[ext_resource type="PackedScene" uid="uid://dbv5xw33fhslv" path="res://key.tscn" id="8_4k2ba"]
+[ext_resource type="PackedScene" uid="uid://nh1janlcs8v1" path="res://inventory/inventory.tscn" id="9_q5aph"]
 
 [sub_resource type="Curve2D" id="Curve2D_fgtdf"]
 _data = {
@@ -15,7 +17,7 @@ _data = {
 point_count = 13
 
 [node name="Main" type="Node"]
-script = ExtResource("1_5d0xc")
+script = ExtResource("1_8okua")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -61,7 +63,19 @@ rotates = false
 [node name="Mob" parent="Path2D/PathFollow2D" instance=ExtResource("2_pgsrf")]
 z_index = 2
 
-[connection signal="hit" from="Player" to="." method="game_over"]
+[node name="Key" parent="." instance=ExtResource("8_4k2ba")]
+position = Vector2(1660, 4142)
+
+[node name="Key2" parent="." instance=ExtResource("8_4k2ba")]
+position = Vector2(6097, 780)
+
+[node name="Key3" parent="." instance=ExtResource("8_4k2ba")]
+position = Vector2(1730, 1228)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("9_q5aph")]
+
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
 [connection signal="start_game" from="HUD" to="." method="new_game"]

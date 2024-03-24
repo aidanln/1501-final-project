@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://nh1janlcs8v1"]
+
+[ext_resource type="Texture2D" uid="uid://cp1jya0it1jd1" path="res://art/inventory back.png" id="1_2lyir"]
+[ext_resource type="Script" path="res://inventory/inventory_gui.gd" id="1_vhtt8"]
+[ext_resource type="PackedScene" uid="uid://dtmag3fmcueg" path="res://inventory/inventory_slot.tscn" id="2_vytgd"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_vhtt8")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -3.0
+offset_right = 474.0
+offset_bottom = 176.0
+texture = ExtResource("1_2lyir")
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 13.0
+offset_top = -73.5
+offset_right = 465.0
+offset_bottom = 74.5
+grow_vertical = 2
+columns = 3
+
+[node name="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_vytgd")]
+layout_mode = 2
+
+[node name="Panel2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_vytgd")]
+layout_mode = 2
+
+[node name="Panel3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_vytgd")]
+layout_mode = 2

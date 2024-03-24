@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://dbv5xw33fhslv"]
+
+[ext_resource type="PackedScene" uid="uid://gmb3xi68m7nj" path="res://item.tscn" id="1_ca62t"]
+[ext_resource type="Script" path="res://key.gd" id="2_def88"]
+[ext_resource type="Texture2D" uid="uid://ba7mbjwk17v8f" path="res://art/c0274e0785c3672-4153522425.png" id="2_puldb"]
+[ext_resource type="Resource" uid="uid://d322kgdwurswp" path="res://inventory/key.tres" id="3_rylyd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvdtm"]
+resource_local_to_scene = true
+size = Vector2(49, 81.1196)
+
+[sub_resource type="Animation" id="Animation_lifil"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Key:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [6.28319]
+}
+
+[sub_resource type="Animation" id="Animation_j3i7e"]
+resource_name = "rotate"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Key:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_67ued"]
+_data = {
+"RESET": SubResource("Animation_lifil"),
+"rotate": SubResource("Animation_j3i7e")
+}
+
+[node name="Key" instance=ExtResource("1_ca62t")]
+script = ExtResource("2_def88")
+itemResource = ExtResource("3_rylyd")
+
+[node name="Key" parent="." index="0"]
+rotation = 6.28319
+texture = ExtResource("2_puldb")
+
+[node name="KeyHitbox" parent="." index="1"]
+shape = SubResource("RectangleShape2D_dvdtm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_67ued")
+}
