@@ -10,10 +10,16 @@ func new_game():
 	$HUD.update_score(score)
 	$HUD.show_message("Get Ready")
 	$Music.play()
+	$PlayArea.show()
+	$Path2D.set_process(true)
+	$CanvasLayer.show()
+	
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # temporary
+	$PlayArea.hide()
+	$Path2D.set_process(false)
+	$CanvasLayer.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -25,6 +31,9 @@ func game_over():
 	$HUD.show_game_over()
 	$Music.stop()
 	$DeathSound.play()
+	$PlayArea.hide()
+	$Path2D.set_process(false)
+	$CanvasLayer.hide()
 
 func _on_score_timer_timeout():
 	score += 1
@@ -32,5 +41,6 @@ func _on_score_timer_timeout():
 
 func _on_start_timer_timeout():
 	$ScoreTimer.start()
+	
 
 

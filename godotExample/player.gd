@@ -3,12 +3,12 @@ extends CharacterBody2D
 signal hit
 
 @export var speed = 500 # player speed (pixels/sec)
-var screen_size # size of the game window
-
+@export var inventory: Inventory
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	screen_size = get_viewport_rect().size
 	hide()
+	print(inventory)
+	print(inventory.inventory.size())
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,15 +29,15 @@ func _process(delta):
 	
 	if velocity.x != 0:
 		$AnimatedSprite2D.animation = "walk"
-		$AnimatedSprite2D.flip_v = false
-		# See the note below about boolean assignment.
 		$AnimatedSprite2D.flip_h = velocity.x < 0
 	elif velocity.y != 0:
 		$AnimatedSprite2D.animation = "walk"
-		$AnimatedSprite2D.flip_v = velocity.y > 0
-
-
+	
+	
 func start(pos):
 	position = pos
 	show()
 	$CollisionShape2D.disabled = false
+
+func get_inventory() :
+	return inventory
