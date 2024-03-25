@@ -24,11 +24,21 @@ func show_game_over():
 	await get_tree().create_timer(1.0).timeout
 	$StartButton.show()
 
+func show_escaped():
+	show_message("Good Job! You Escaped!")
+	# Wait until the MessageTimer has counted down.
+	await $MessageTimer.timeout
+
+	# $Message.text = "Dodge the Creeps!"
+	# $Message.show()
+	# await get_tree().create_timer(1.0).timeout
+	# $StartButton.show()
+
 func update_score(score):
 	$ScoreLabel.text = str(score)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func _on_start_button_pressed():

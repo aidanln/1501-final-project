@@ -1,157 +1,133 @@
-[gd_scene load_steps=53 format=3 uid="uid://d31yavvesmwla"]
+[gd_scene load_steps=45 format=3 uid="uid://d31yavvesmwla"]
 
 [ext_resource type="Texture2D" uid="uid://b5pg1s324p8vx" path="res://art/floorPlanV1.png" id="1_gvy35"]
 [ext_resource type="FontFile" uid="uid://bqcqxruflev4m" path="res://fonts/Xolonium-Regular.ttf" id="2_ss6d6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lrw6q"]
-size = Vector2(1217, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5amy3"]
-size = Vector2(642.5, 30)
+size = Vector2(1355, 160)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u6q1a"]
-size = Vector2(642.5, 30)
+size = Vector2(808.25, 173)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_su1tc"]
+size = Vector2(641, 106)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vh1kv"]
-size = Vector2(494, 35.5)
+size = Vector2(511, 134)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b1uyb"]
-size = Vector2(1014, 25.5001)
+size = Vector2(1321, 135.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xs7m"]
-size = Vector2(1320.25, 31)
+size = Vector2(2536.01, 175)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jqwx4"]
-size = Vector2(752, 31.25)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8b2r"]
-size = Vector2(403.25, 24)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yasqp"]
-size = Vector2(235, 25.625)
+size = Vector2(590, 160)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5aun5"]
-size = Vector2(1822, 32.6252)
+size = Vector2(1912, 144)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwjbg"]
-size = Vector2(403.25, 24)
+size = Vector2(324, 177)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w5eki"]
-size = Vector2(1122, 31.25)
+size = Vector2(1095, 138)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_12seh"]
-size = Vector2(412.625, 34)
+size = Vector2(463, 170)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ygtql"]
-size = Vector2(767.313, 34)
+size = Vector2(570, 171)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yd514"]
-size = Vector2(272.656, 34)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hpy07"]
-size = Vector2(644, 28.7501)
+size = Vector2(322.328, 177)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lsprm"]
-size = Vector2(385, 36)
+size = Vector2(903, 139)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_254mn"]
-size = Vector2(455.25, 30)
+size = Vector2(523.497, 178.001)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4dvus"]
-size = Vector2(2636, 29.3754)
+size = Vector2(2950, 145.376)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qp3wh"]
-size = Vector2(908, 32)
+size = Vector2(1083, 181)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ca1tp"]
-size = Vector2(644, 28.7501)
+size = Vector2(835, 136)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_14q8m"]
-size = Vector2(1565.31, 30)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_spwm5"]
-size = Vector2(526.088, 29.9314)
+size = Vector2(1937, 180)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oqx32"]
-size = Vector2(571.625, 31)
+size = Vector2(650, 182)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_214u5"]
-size = Vector2(559, 31.3751)
+size = Vector2(517.5, 145.344)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_182k7"]
-size = Vector2(731.5, 31.3751)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewflg"]
-size = Vector2(356, 28.375)
+size = Vector2(838, 135.999)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_666id"]
-size = Vector2(253.813, 34.5)
+size = Vector2(183, 173.251)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p2s32"]
-size = Vector2(1546.88, 36.0781)
+size = Vector2(1525, 139.999)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lm0kw"]
-size = Vector2(595.313, 36)
+size = Vector2(557.657, 191)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y2axj"]
-size = Vector2(1416.44, 33.0391)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_keeqb"]
-size = Vector2(1147.66, 30)
+size = Vector2(1301.22, 129.52)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_duo5f"]
-size = Vector2(505.656, 38)
+size = Vector2(392.998, 185)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jetdk"]
-size = Vector2(445.914, 34)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_msg4w"]
+size = Vector2(402, 182)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kr6iu"]
-size = Vector2(240, 31)
+size = Vector2(254, 144.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtvnw"]
-size = Vector2(1142.22, 31.5195)
+size = Vector2(1374, 122.76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jetdk"]
+size = Vector2(325.979, 189.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p42qw"]
-size = Vector2(773.957, 34)
+size = Vector2(1119, 177)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nruox"]
-size = Vector2(3338.22, 39.52)
+size = Vector2(2929, 39.52)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa1rc"]
-size = Vector2(761.828, 35)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xtp4"]
-size = Vector2(465.914, 40.5)
+size = Vector2(1817.91, 176)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5sfjj"]
-size = Vector2(2245.11, 27.76)
+size = Vector2(2147, 165)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xmxu"]
-size = Vector2(894.979, 29)
+size = Vector2(862.98, 168)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1j0y"]
-size = Vector2(206.625, 24)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jit5r"]
-size = Vector2(148.313, 24)
+size = Vector2(367.157, 174)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iyovh"]
-size = Vector2(1423.49, 29)
+size = Vector2(1504, 115)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_it2eh"]
-size = Vector2(723, 34.625)
+size = Vector2(647, 160)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08s4t"]
-size = Vector2(752, 31.25)
+size = Vector2(648, 159)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tbxtt"]
-size = Vector2(3795, 25.6881)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3riau"]
-size = Vector2(711.25, 30)
+size = Vector2(3890, 98.8442)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2qupc"]
-size = Vector2(913.625, 30)
+size = Vector2(913.625, 111)
 
 [node name="PlayArea" type="StaticBody2D"]
 collision_layer = 2
@@ -167,344 +143,295 @@ texture = ExtResource("1_gvy35")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(2119.5, 765)
+position = Vector2(1986.5, 666)
 shape = SubResource("RectangleShape2D_lrw6q")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-z_index = 1
-position = Vector2(1524, 1071)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_5amy3")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(2755, 1083)
+position = Vector2(2736.5, 1000.12)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_u6q1a")
 
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(2677, 278.5)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_su1tc")
+
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(1686, 1381.75)
+position = Vector2(1733.5, 1422)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_vh1kv")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(2719, 1398.75)
+position = Vector2(2813.5, 1424.12)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_b1uyb")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(1440.5, 2053.88)
+position = Vector2(1392.5, 2019)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_4xs7m")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(1686, 2715.63)
+position = Vector2(1766, 2652)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_jqwx4")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="."]
-z_index = 1
-position = Vector2(1316, 2898.63)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_q8b2r")
-
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="."]
-z_index = 1
-position = Vector2(1430.5, 3105.81)
-rotation = -3.14159
-shape = SubResource("RectangleShape2D_yasqp")
-
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(2671, 3111.31)
+position = Vector2(2579, 3086)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_5aun5")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(2249, 2913)
+position = Vector2(2288.5, 2864)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_fwjbg")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(2802, 2716)
+position = Vector2(2747.5, 2640)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_w5eki")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(3361, 2685.69)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_12seh")
-
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="."]
-z_index = 1
-position = Vector2(3361, 2685.69)
+position = Vector2(3380, 2607.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_12seh")
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(2643, 2314.34)
+position = Vector2(2738.5, 2281)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_ygtql")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(2643, 1548.67)
+position = Vector2(2739.5, 1646.84)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_yd514")
 
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="."]
-z_index = 1
-position = Vector2(4351, 1421.38)
-rotation = -3.14159
-shape = SubResource("RectangleShape2D_hpy07")
-
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(3833.5, 1407)
+position = Vector2(4061.5, 1422.5)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_lsprm")
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(4026, 1191.63)
+position = Vector2(3955, 1109.75)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_254mn")
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(5355, 975.688)
+position = Vector2(5512, 917.688)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_4dvus")
 
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(5652, 1444)
+position = Vector2(5747.5, 1519.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_qp3wh")
 
 [node name="CollisionShape2D22" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(5338, 1761)
+position = Vector2(5242.5, 1749)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_ca1tp")
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(7038, 2111.34)
+position = Vector2(6897, 1941)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_14q8m")
 
-[node name="CollisionShape2D24" type="CollisionShape2D" parent="."]
-z_index = 1
-position = Vector2(6846.58, 1154.42)
-rotation = 0.785398
-shape = SubResource("RectangleShape2D_spwm5")
-
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(4651.5, 1503.19)
+position = Vector2(4598, 1492)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_oqx32")
 
 [node name="CollisionShape2D26" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(6760.5, 1824.69)
+position = Vector2(6556, 1814)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_214u5")
 
 [node name="CollisionShape2D27" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(6651.75, 2293)
+position = Vector2(6396, 2319)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_182k7")
 
-[node name="CollisionShape2D28" type="CollisionShape2D" parent="."]
-z_index = 1
-position = Vector2(5825, 2278.19)
-rotation = -3.14159
-shape = SubResource("RectangleShape2D_ewflg")
-
 [node name="CollisionShape2D29" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(6499.25, 2141.91)
+position = Vector2(6385.63, 2159.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_666id")
 
 [node name="CollisionShape2D30" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(6247, 2891.96)
+position = Vector2(6225.5, 2840)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_p2s32")
 
 [node name="CollisionShape2D31" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(5667, 2579.66)
+position = Vector2(5746.5, 2529.83)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_lm0kw")
 
 [node name="CollisionShape2D32" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(5956.78, 4029.52)
+position = Vector2(5730.61, 3926.76)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_y2axj")
 
-[node name="CollisionShape2D33" type="CollisionShape2D" parent="."]
-z_index = 1
-position = Vector2(6652, 3466.17)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_keeqb")
-
 [node name="CollisionShape2D34" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(5491, 3144.83)
+position = Vector2(5553.5, 3088.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_duo5f")
 
 [node name="CollisionShape2D35" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(5263, 3819.91)
+position = Vector2(5303, 3668)
 rotation = 1.5708
-shape = SubResource("RectangleShape2D_jetdk")
+shape = SubResource("RectangleShape2D_msg4w")
 
 [node name="CollisionShape2D36" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(5374, 3601.5)
+position = Vector2(5521, 3539.25)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_kr6iu")
 
 [node name="CollisionShape2D37" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(4171.89, 3580.76)
+position = Vector2(4215, 3734.38)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_qtvnw")
 
 [node name="CollisionShape2D38" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(4734, 3814.04)
+position = Vector2(4844.75, 3832.01)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_jetdk")
 
 [node name="CollisionShape2D39" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(3598, 3978.02)
+position = Vector2(3443.5, 4232.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_p42qw")
 
 [node name="CollisionShape2D40" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(4905.89, 4787.76)
+position = Vector2(4995.5, 4743)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_nruox")
 
 [node name="CollisionShape2D41" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(6563.5, 4415.91)
+position = Vector2(6456, 3819.96)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_wa1rc")
 
-[node name="CollisionShape2D42" type="CollisionShape2D" parent="."]
-z_index = 1
-position = Vector2(3255.25, 4577.96)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_4xtp4")
-
 [node name="CollisionShape2D43" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(2504.45, 4344.88)
+position = Vector2(2384.5, 4331.5)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_5sfjj")
 
 [node name="CollisionShape2D44" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(1403.5, 3892.49)
+position = Vector2(1392, 3908.49)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_0xmxu")
 
 [node name="CollisionShape2D45" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(3573, 3204.69)
+position = Vector2(3448, 3302.42)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_r1j0y")
 
-[node name="CollisionShape2D46" type="CollisionShape2D" parent="."]
-z_index = 1
-position = Vector2(1392, 3184.84)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_jit5r")
-
 [node name="CollisionShape2D47" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(678, 3093.26)
+position = Vector2(685.5, 3053)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_iyovh")
 
 [node name="CollisionShape2D48" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(1036.5, 3802.31)
+position = Vector2(998.5, 3846)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_it2eh")
 
 [node name="CollisionShape2D49" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(1046, 2408)
+position = Vector2(994, 2364.5)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_08s4t")
 
 [node name="CollisionShape2D50" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(4579, 66)
+position = Vector2(4634, 14.9999)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_tbxtt")
 
-[node name="CollisionShape2D51" type="CollisionShape2D" parent="."]
-z_index = 1
-position = Vector2(2691, 404.625)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_3riau")
-
 [node name="CollisionShape2D52" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(6459, 524.188)
+position = Vector2(6522, 517)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_2qupc")
 
-[node name="Label" type="Label" parent="."]
+[node name="ItemLocationLabel1" type="Label" parent="."]
 z_index = 1
-offset_left = 1457.0
-offset_top = 4212.0
-offset_right = 1916.0
-offset_bottom = 4290.0
+offset_left = 1676.0
+offset_top = 3952.0
+offset_right = 2135.0
+offset_bottom = 4030.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ss6d6")
 theme_override_font_sizes/font_size = 64
 text = "Item Location"
 
-[node name="Label2" type="Label" parent="."]
+[node name="ItemLocationLabel2" type="Label" parent="."]
 z_index = 1
-offset_left = 5869.0
-offset_top = 827.0
-offset_right = 6328.0
-offset_bottom = 905.0
+offset_left = 5340.0
+offset_top = 198.0
+offset_right = 5799.0
+offset_bottom = 276.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ss6d6")
 theme_override_font_sizes/font_size = 64
 text = "Item Location"
 
-[node name="Label3" type="Label" parent="."]
+[node name="ItemLocationLabel3" type="Label" parent="."]
 z_index = 1
-offset_left = 1557.0
-offset_top = 1268.0
-offset_right = 2016.0
-offset_bottom = 1346.0
+offset_left = 1621.0
+offset_top = 1087.0
+offset_right = 2080.0
+offset_bottom = 1165.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ss6d6")
 theme_override_font_sizes/font_size = 64
 text = "Item Location"
+
+[node name="EscapeLabel" type="Label" parent="."]
+z_index = 1
+offset_left = 5663.0
+offset_top = 544.0
+offset_right = 6122.0
+offset_bottom = 622.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ss6d6")
+theme_override_font_sizes/font_size = 64
+text = "Escape -->"

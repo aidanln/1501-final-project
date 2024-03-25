@@ -1,6 +1,6 @@
 extends CharacterBody2D
 @onready var path_follow = get_parent()
-var speed = 150
+var speed = 300
 var direction = 0
 
 # Called when the node enters the scene tree for the first time.

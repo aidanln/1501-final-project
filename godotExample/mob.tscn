@@ -1,36 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://15uvohd5ikfa"]
+[gd_scene load_steps=5 format=3 uid="uid://15uvohd5ikfa"]
 
 [ext_resource type="Script" path="res://mob.gd" id="1_6da6p"]
-[ext_resource type="Texture2D" uid="uid://x11jv0rfiahw" path="res://art/enemyFlyingAlt_1.png" id="1_uq4kc"]
-[ext_resource type="Texture2D" uid="uid://ebwdvv11ybnd" path="res://art/enemyFlyingAlt_2.png" id="2_i11ai"]
-[ext_resource type="Texture2D" uid="uid://cb2awayd25gp0" path="res://art/enemySwimming_1.png" id="3_lbhvn"]
-[ext_resource type="Texture2D" uid="uid://imhxb34eao6r" path="res://art/enemySwimming_2.png" id="4_x1wxu"]
 [ext_resource type="Texture2D" uid="uid://o50d1lbshacs" path="res://art/butler_rough (1).png" id="6_qlo16"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6fsgq"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_uq4kc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_i11ai")
-}],
-"loop": true,
-"name": &"fly",
-"speed": 3.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_lbhvn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_x1wxu")
-}],
-"loop": true,
-"name": &"swim",
-"speed": 3.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("6_qlo16")
@@ -53,7 +27,6 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6fsgq")
 animation = &"walk"
-frame_progress = 0.591916
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -7)

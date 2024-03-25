@@ -40,9 +40,9 @@ offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_ilooq")
-theme_override_font_sizes/font_size = 64
-text = "Escape the Butler!
-(working title)"
+theme_override_font_sizes/font_size = 128
+text = "Abandoned
+"
 horizontal_alignment = 1
 autowrap_mode = 2
 
