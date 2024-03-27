@@ -52,13 +52,26 @@ func _on_escape_area_entered(_area:Area2D):
 			itemCount += 1
 	if (itemCount > 1):
 		$ScoreTimer.stop()
-		$HUD.show_escaped()
+		$HUD.show_escaped1(itemCount)
 		$Music.stop()
 		$PlayArea.hide()
 		$Path2D.set_process(false)
 		$CanvasLayer.hide()
 	else:
 		$HUD.show_message("You need at least 2 keys first!")
+	
+func _on_escape_2_area_entered(_area):
+	var itemCount = 0
+	for item in $Player.inventory.inventory:
+		if (item != null):
+			itemCount += 1
+		$ScoreTimer.stop()
+		$HUD.show_escaped2(itemCount)
+		$Music.stop()
+		$PlayArea.hide()
+		$Path2D.set_process(false)
+		$CanvasLayer.hide()
+
 
 func _on_sfx_timer_timeout():
 	var i = randi_range(1, 6)
@@ -74,3 +87,10 @@ func _on_sfx_timer_timeout():
 		$Player/whatwasthat.play()
 	if (i == 6) :
 		$Player/whereami.play()
+
+
+func _on_lock_key_3_area_entered(_area):
+	if ($Player.inventory.inventory[1] != null) :
+		$LockKey3/LockKey3Sprite.hide()
+		$LockKey3/LockKey3Hitbox.queue_free()
+
