@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8qd3l50bbfp6"
+path="res://.godot/imported/cameraman.mp3-fa4bb941d2a22680580bdbd8c386593a.mp3str"
+
+[deps]
+
+source_file="res://music and sfx/cameraman.mp3"
+dest_files=["res://.godot/imported/cameraman.mp3-fa4bb941d2a22680580bdbd8c386593a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

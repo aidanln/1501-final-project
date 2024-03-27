@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://10g2te5pea4"
+path="res://.godot/imported/whereamI.mp3-919ea83910ea3bcc991ab82618a18c48.mp3str"
+
+[deps]
+
+source_file="res://music and sfx/whereamI.mp3"
+dest_files=["res://.godot/imported/whereamI.mp3-919ea83910ea3bcc991ab82618a18c48.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

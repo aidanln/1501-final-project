@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxoayx38xa25v"
+path="res://.godot/imported/whatwasthat.mp3-14ba794af78cb897ede1605aa0dd10f0.mp3str"
+
+[deps]
+
+source_file="res://music and sfx/whatwasthat.mp3"
+dest_files=["res://.godot/imported/whatwasthat.mp3-14ba794af78cb897ede1605aa0dd10f0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d10otswyfgane"
+path="res://.godot/imported/more chill ambience.ogg-6b6077f81fa23ba06d881ad2add376bd.oggvorbisstr"
+
+[deps]
+
+source_file="res://music and sfx/more chill ambience.ogg"
+dest_files=["res://.godot/imported/more chill ambience.ogg-6b6077f81fa23ba06d881ad2add376bd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

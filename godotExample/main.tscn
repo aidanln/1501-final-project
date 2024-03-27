@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://15uvohd5ikfa" path="res://mob.tscn" id="2_pgsrf"]
 [ext_resource type="Texture2D" uid="uid://cbjwwec0snk52" path="res://art/altSpritesheet(16x16).png" id="3_7ahha"]
 [ext_resource type="PackedScene" uid="uid://bomnm0yy52msj" path="res://hud.tscn" id="4_32njb"]
-[ext_resource type="AudioStream" uid="uid://bicnxy8ngq1wp" path="res://art/more chill ambience.ogg" id="4_ou3kb"]
+[ext_resource type="AudioStream" uid="uid://d10otswyfgane" path="res://music and sfx/more chill ambience.ogg" id="6_7gqrp"]
 [ext_resource type="PackedScene" uid="uid://d31yavvesmwla" path="res://play_area.tscn" id="7_j8e16"]
 [ext_resource type="PackedScene" uid="uid://dbv5xw33fhslv" path="res://key.tscn" id="8_4k2ba"]
 [ext_resource type="PackedScene" uid="uid://nh1janlcs8v1" path="res://inventory/inventory.tscn" id="9_q5aph"]
@@ -1234,7 +1234,7 @@ position = Vector2(5073, 4915)
 [node name="HUD" parent="." instance=ExtResource("4_32njb")]
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_ou3kb")
+stream = ExtResource("6_7gqrp")
 volume_db = -10.805
 
 [node name="PlayArea" parent="." instance=ExtResource("7_j8e16")]
@@ -1275,7 +1275,11 @@ position = Vector2(6205, 1189)
 position = Vector2(-2, -16)
 shape = SubResource("CircleShape2D_r82fi")
 
+[node name="SFXTimer" type="Timer" parent="."]
+wait_time = 20.0
+
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
 [connection signal="start_game" from="HUD" to="." method="new_game"]
 [connection signal="area_entered" from="Escape" to="." method="_on_escape_area_entered"]
+[connection signal="timeout" from="SFXTimer" to="." method="_on_sfx_timer_timeout"]
