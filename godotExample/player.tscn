@@ -1,8 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmw085wbs6130"]
+[gd_scene load_steps=13 format=3 uid="uid://cmw085wbs6130"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_60gqt"]
 [ext_resource type="Texture2D" uid="uid://caek78jyd7k3e" path="res://art/guy_rough.png" id="2_cv5dc"]
 [ext_resource type="Resource" uid="uid://7oogkor15a0y" path="res://inventory/playerinventory.tres" id="2_qas6k"]
+[ext_resource type="AudioStream" uid="uid://c8qd3l50bbfp6" path="res://music and sfx/cameraman.mp3" id="4_cxls2"]
+[ext_resource type="AudioStream" uid="uid://cjs6nofumfrqq" path="res://music and sfx/hungry.mp3" id="5_x3pl5"]
+[ext_resource type="AudioStream" uid="uid://b07bipewltqiu" path="res://music and sfx/Imissmymom.mp3" id="6_oq0sp"]
+[ext_resource type="AudioStream" uid="uid://c7epaqu1ao7cy" path="res://music and sfx/leave.mp3" id="7_46hr4"]
+[ext_resource type="AudioStream" uid="uid://bxoayx38xa25v" path="res://music and sfx/whatwasthat.mp3" id="8_w4356"]
+[ext_resource type="AudioStream" uid="uid://10g2te5pea4" path="res://music and sfx/whereamI.mp3" id="9_xwo05"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e52j1"]
 animations = [{
@@ -59,5 +65,29 @@ position_smoothing_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CapsuleShape2D_665m7")
+
+[node name="cameraman" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_cxls2")
+volume_db = -3.748
+
+[node name="hungry" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_x3pl5")
+volume_db = -3.748
+
+[node name="imissmymom" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_oq0sp")
+volume_db = -3.748
+
+[node name="leave" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_46hr4")
+volume_db = -3.878
+
+[node name="whatwasthat" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_w4356")
+volume_db = -3.748
+
+[node name="whereami" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_xwo05")
+volume_db = -3.748
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
