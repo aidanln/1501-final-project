@@ -24,8 +24,11 @@ func show_game_over():
 	await get_tree().create_timer(1.0).timeout
 	$StartButton.show()
 
-func show_escaped():
-	show_message("Good Job! You Escaped!")
+func show_escaped1(itemCount):
+	if (itemCount < 3) :
+		show_message("Good Job! You escaped through the main exit. However, you did not collect all of the keys.")
+	else :
+		show_message("Good Job! You escaped through the main exit while collecting all of the keys!")
 	# Wait until the MessageTimer has counted down.
 	await $MessageTimer.timeout
 
@@ -33,6 +36,13 @@ func show_escaped():
 	# $Message.show()
 	# await get_tree().create_timer(1.0).timeout
 	# $StartButton.show()
+func show_escaped2(itemCount):
+	if (itemCount < 3) :
+		show_message("Good Job! You escaped through the side exit. However, you did not collect all of the keys.")
+	else :
+		show_message("Good Job! You escaped Through the side exit while collecting all of the keys!")
+	# Wait until the MessageTimer has counted down.
+	await $MessageTimer.timeout
 
 func update_score(score):
 	$ScoreLabel.text = str(score)
