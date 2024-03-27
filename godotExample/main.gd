@@ -43,9 +43,17 @@ func _on_start_timer_timeout():
 	
 # called when player hits the escape ladder outside
 func _on_escape_area_entered(_area:Area2D):
-	$ScoreTimer.stop()
-	$HUD.show_escaped()
-	$Music.stop()
-	$PlayArea.hide()
-	$Path2D.set_process(false)
-	$CanvasLayer.hide()
+	var itemCount = 0
+	# get amount of items in the inventory
+	for item in $Player.inventory.inventory:
+		if (item != null):
+			itemCount += 1
+	if (itemCount > 1):
+		$ScoreTimer.stop()
+		$HUD.show_escaped()
+		$Music.stop()
+		$PlayArea.hide()
+		$Path2D.set_process(false)
+		$CanvasLayer.hide()
+	else:
+		$HUD.show_message("You need at least 2 keys first!")

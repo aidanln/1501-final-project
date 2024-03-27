@@ -1,7 +1,6 @@
-[gd_scene load_steps=45 format=3 uid="uid://d31yavvesmwla"]
+[gd_scene load_steps=44 format=3 uid="uid://d31yavvesmwla"]
 
 [ext_resource type="Texture2D" uid="uid://b5pg1s324p8vx" path="res://art/floorPlanV1.png" id="1_gvy35"]
-[ext_resource type="FontFile" uid="uid://bqcqxruflev4m" path="res://fonts/Xolonium-Regular.ttf" id="2_ss6d6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lrw6q"]
 size = Vector2(1355, 160)
@@ -391,47 +390,3 @@ z_index = 1
 position = Vector2(6522, 517)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_2qupc")
-
-[node name="ItemLocationLabel1" type="Label" parent="."]
-z_index = 1
-offset_left = 1676.0
-offset_top = 3952.0
-offset_right = 2135.0
-offset_bottom = 4030.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_ss6d6")
-theme_override_font_sizes/font_size = 64
-text = "Item Location"
-
-[node name="ItemLocationLabel2" type="Label" parent="."]
-z_index = 1
-offset_left = 5340.0
-offset_top = 198.0
-offset_right = 5799.0
-offset_bottom = 276.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_ss6d6")
-theme_override_font_sizes/font_size = 64
-text = "Item Location"
-
-[node name="ItemLocationLabel3" type="Label" parent="."]
-z_index = 1
-offset_left = 1621.0
-offset_top = 1087.0
-offset_right = 2080.0
-offset_bottom = 1165.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_ss6d6")
-theme_override_font_sizes/font_size = 64
-text = "Item Location"
-
-[node name="EscapeLabel" type="Label" parent="."]
-z_index = 1
-offset_left = 5663.0
-offset_top = 544.0
-offset_right = 6122.0
-offset_bottom = 622.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_ss6d6")
-theme_override_font_sizes/font_size = 64
-text = "Escape -->"
