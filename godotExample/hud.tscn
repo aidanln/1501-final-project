@@ -1,7 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bomnm0yy52msj"]
+[gd_scene load_steps=6 format=3 uid="uid://bomnm0yy52msj"]
 
 [ext_resource type="Script" path="res://hud.gd" id="1_3ot6e"]
 [ext_resource type="FontFile" uid="uid://bqcqxruflev4m" path="res://fonts/Xolonium-Regular.ttf" id="2_ilooq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3jv6w"]
+line_spacing = 10.0
+font_size = 48
 
 [sub_resource type="InputEventAction" id="InputEventAction_jcw4u"]
 action = &"start_game"
@@ -27,7 +31,6 @@ text = "0"
 horizontal_alignment = 1
 
 [node name="Message" type="Label" parent="."]
-z_index = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -46,26 +49,83 @@ text = "Abandoned
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="StartButton" type="Button" parent="."]
+[node name="HelpMessage" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = -380.0
+offset_right = 800.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_ilooq")
+theme_override_font_sizes/font_size = 128
+text = "Welcome to Abandoned!
+
+You are an influencer exploring an abandonded mansion with your camera man, when suddenly he goes missing at the hands of the mansion's butler.
+
+Use WASD to explore the house, hide from the butler, grab keys, unlock doors, and escape the house with your life.
+"
+label_settings = SubResource("LabelSettings_3jv6w")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MessageTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -100.0
-offset_top = -140.0
+offset_top = -400.0
 offset_right = 100.0
-offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 0
+
+[node name="HBoxContainer" type="VBoxContainer" parent="Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.5
+offset_top = -133.0
+offset_right = 88.5
+offset_bottom = 133.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="Menu/HBoxContainer"]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ilooq")
 theme_override_font_sizes/font_size = 64
 shortcut = SubResource("Shortcut_0fcbf")
 text = "Start"
 
-[node name="MessageTimer" type="Timer" parent="."]
-wait_time = 2.0
-one_shot = true
+[node name="HelpButton" type="Button" parent="Menu/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ilooq")
+theme_override_font_sizes/font_size = 64
+shortcut = SubResource("Shortcut_0fcbf")
+text = "Help"
 
-[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[node name="QuitButton" type="Button" parent="Menu/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ilooq")
+theme_override_font_sizes/font_size = 64
+shortcut = SubResource("Shortcut_0fcbf")
+text = "Quit"
+
 [connection signal="timeout" from="MessageTimer" to="." method="_on_message_timer_timeout"]
+[connection signal="pressed" from="Menu/HBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Menu/HBoxContainer/HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="pressed" from="Menu/HBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

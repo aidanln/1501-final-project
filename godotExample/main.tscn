@@ -6,11 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://cbjwwec0snk52" path="res://art/altSpritesheet(16x16).png" id="3_7ahha"]
 [ext_resource type="PackedScene" uid="uid://bomnm0yy52msj" path="res://hud.tscn" id="4_32njb"]
 [ext_resource type="AudioStream" uid="uid://d10otswyfgane" path="res://music and sfx/more chill ambience.ogg" id="6_7gqrp"]
+[ext_resource type="AudioStream" uid="uid://7ppo3fyemdoo" path="res://music and sfx/main ambience.ogg" id="7_c7vci"]
 [ext_resource type="PackedScene" uid="uid://d31yavvesmwla" path="res://play_area.tscn" id="7_j8e16"]
 [ext_resource type="PackedScene" uid="uid://dbv5xw33fhslv" path="res://key.tscn" id="8_4k2ba"]
 [ext_resource type="PackedScene" uid="uid://nh1janlcs8v1" path="res://inventory/inventory.tscn" id="9_q5aph"]
 [ext_resource type="Texture2D" uid="uid://cgen4q4qfh2s6" path="res://art/mainSpritesheet(16x16).png" id="9_yxjnr"]
 [ext_resource type="Texture2D" uid="uid://batf6sdxbvkiu" path="res://art/Triangle Padlock - BRONZE - 0000.png" id="11_fo0og"]
+[ext_resource type="AudioStream" uid="uid://cflyerqj0ery2" path="res://music and sfx/win.mp3" id="13_lu7c2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n4i7c"]
 texture = ExtResource("9_yxjnr")
@@ -1197,9 +1199,10 @@ script = ExtResource("1_8okua")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0941176, 0.145098, 0.168627, 1)
+color = Color(0.0509804, 0.0901961, 0.129412, 1)
 
 [node name="Doors" type="TileMap" parent="."]
 z_index = 25
@@ -1246,9 +1249,13 @@ position = Vector2(5073, 4915)
 
 [node name="HUD" parent="." instance=ExtResource("4_32njb")]
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_7gqrp")
-volume_db = -10.805
+volume_db = -8.06
+
+[node name="MainMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_c7vci")
+volume_db = -6.419
 
 [node name="PlayArea" parent="." instance=ExtResource("7_j8e16")]
 visible = false
@@ -1348,6 +1355,11 @@ metadata/_edit_use_anchors_ = true
 z_index = 26
 position = Vector2(5950, 2928)
 shape = SubResource("RectangleShape2D_2gupo")
+
+[node name="ur_winnar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_lu7c2")
+volume_db = 11.904
+pitch_scale = 1.53
 
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
