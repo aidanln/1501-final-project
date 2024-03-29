@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cflyerqj0ery2"
+path="res://.godot/imported/win.mp3-34dfcf17acdcfd6ea5f49e02fad8270b.mp3str"
+
+[deps]
+
+source_file="res://music and sfx/win.mp3"
+dest_files=["res://.godot/imported/win.mp3-34dfcf17acdcfd6ea5f49e02fad8270b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
