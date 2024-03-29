@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://d31yavvesmwla"]
+[gd_scene load_steps=54 format=3 uid="uid://d31yavvesmwla"]
 
 [ext_resource type="Texture2D" uid="uid://b5pg1s324p8vx" path="res://art/floorPlanV1.png" id="1_gvy35"]
 
@@ -127,6 +127,36 @@ size = Vector2(3890, 98.8442)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2qupc"]
 size = Vector2(913.625, 111)
+
+[sub_resource type="Gradient" id="Gradient_yi48o"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_f4ovt"]
+gradient = SubResource("Gradient_yi48o")
+fill_to = Vector2(0.00869565, 0.00434783)
+
+[sub_resource type="Gradient" id="Gradient_lke5w"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cxhh7"]
+gradient = SubResource("Gradient_lke5w")
+fill_to = Vector2(0.00869565, 0)
+
+[sub_resource type="Gradient" id="Gradient_kbpkv"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_54ib7"]
+gradient = SubResource("Gradient_kbpkv")
+fill_to = Vector2(0.00869565, 0.00434783)
+
+[sub_resource type="Gradient" id="Gradient_0rgn5"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uhdfb"]
+gradient = SubResource("Gradient_0rgn5")
+fill_to = Vector2(0, 0.0130435)
+
+[sub_resource type="Gradient" id="Gradient_m2eh3"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4tbyc"]
+gradient = SubResource("Gradient_m2eh3")
+fill_to = Vector2(0, 0.0130435)
 
 [node name="PlayArea" type="StaticBody2D"]
 collision_layer = 2
@@ -390,3 +420,32 @@ z_index = 1
 position = Vector2(6522, 517)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_2qupc")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+blend_mode = 1
+
+[node name="PointLight2D" type="PointLight2D" parent="DirectionalLight2D"]
+position = Vector2(4946, 4347)
+scale = Vector2(49.7344, 14.0938)
+texture = SubResource("GradientTexture2D_f4ovt")
+
+[node name="PointLight2D2" type="PointLight2D" parent="DirectionalLight2D"]
+position = Vector2(4140, 3787)
+scale = Vector2(25.3438, 3.65625)
+blend_mode = 2
+texture = SubResource("GradientTexture2D_cxhh7")
+
+[node name="PointLight2D3" type="PointLight2D" parent="DirectionalLight2D"]
+position = Vector2(4643.5, 460)
+scale = Vector2(57.0156, 12.0625)
+texture = SubResource("GradientTexture2D_54ib7")
+
+[node name="PointLight2D4" type="PointLight2D" parent="DirectionalLight2D"]
+position = Vector2(3345.5, 1104)
+scale = Vector2(15.7656, 7.8125)
+texture = SubResource("GradientTexture2D_uhdfb")
+
+[node name="PointLight2D5" type="PointLight2D" parent="DirectionalLight2D"]
+position = Vector2(2775.5, 330.5)
+scale = Vector2(1.26562, 7.89063)
+texture = SubResource("GradientTexture2D_4tbyc")
