@@ -1,4 +1,5 @@
 [gd_scene load_steps=21 format=3 uid="uid://124rp1mj0ued"]
+[gd_scene load_steps=21 format=3 uid="uid://124rp1mj0ued"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_8okua"]
 [ext_resource type="PackedScene" uid="uid://cmw085wbs6130" path="res://player.tscn" id="2_gnskr"]
@@ -1180,11 +1181,17 @@ point_count = 53
 [sub_resource type="CircleShape2D" id="CircleShape2D_r82fi"]
 radius = 48.4
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u03so"]
-size = Vector2(133, 45)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1tla"]
+size = Vector2(155, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2gupo"]
+size = Vector2(149.5, 62.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cce8g"]
 radius = 48.4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yw00j"]
+size = Vector2(155, 45)
 
 [node name="Main" type="Node"]
 script = ExtResource("1_8okua")
@@ -1252,6 +1259,7 @@ stream = ExtResource("7_c7vci")
 volume_db = -6.419
 
 [node name="PlayArea" parent="." instance=ExtResource("7_j8e16")]
+visible = false
 z_index = 25
 position = Vector2(44, 565)
 
@@ -1292,6 +1300,14 @@ shape = SubResource("CircleShape2D_r82fi")
 [node name="SFXTimer" type="Timer" parent="."]
 wait_time = 20.0
 
+[node name="LockKey3PlayerCollision" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="LockKey3Hitbox" type="CollisionShape2D" parent="LockKey3PlayerCollision"]
+z_index = 26
+position = Vector2(3588, 2039)
+shape = SubResource("RectangleShape2D_b1tla")
+
 [node name="LockKey3" type="Area2D" parent="."]
 
 [node name="LockKey3Sprite" type="TextureRect" parent="LockKey3"]
@@ -1302,11 +1318,12 @@ offset_right = 3647.0
 offset_bottom = 2070.0
 texture = ExtResource("11_fo0og")
 stretch_mode = 4
+metadata/_edit_use_anchors_ = true
 
-[node name="LockKey3Hitbox" type="CollisionShape2D" parent="LockKey3"]
+[node name="LockKey3Hitbox2" type="CollisionShape2D" parent="LockKey3"]
 z_index = 26
-position = Vector2(3586.5, 2034)
-shape = SubResource("RectangleShape2D_u03so")
+position = Vector2(3587.25, 2047.75)
+shape = SubResource("RectangleShape2D_2gupo")
 
 [node name="Escape2" type="Area2D" parent="."]
 position = Vector2(1084, 3419)
@@ -1314,6 +1331,31 @@ position = Vector2(1084, 3419)
 [node name="EscapeHitbox2" type="CollisionShape2D" parent="Escape2"]
 position = Vector2(2, 2)
 shape = SubResource("CircleShape2D_cce8g")
+
+[node name="LockCameramanPlayerCollision" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="LockCameramanHitbox" type="CollisionShape2D" parent="LockCameramanPlayerCollision"]
+z_index = 26
+position = Vector2(5949, 2937)
+shape = SubResource("RectangleShape2D_yw00j")
+
+[node name="LockCamerman" type="Area2D" parent="."]
+
+[node name="LockCamermanSprite" type="TextureRect" parent="LockCamerman"]
+z_index = 26
+offset_left = 5971.0
+offset_top = 2919.0
+offset_right = 6014.0
+offset_bottom = 2968.0
+texture = ExtResource("11_fo0og")
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="LockCameramanHitbox2" type="CollisionShape2D" parent="LockCamerman"]
+z_index = 26
+position = Vector2(5950, 2928)
+shape = SubResource("RectangleShape2D_2gupo")
 
 [node name="ur_winnar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_lu7c2")
@@ -1327,3 +1369,4 @@ pitch_scale = 1.53
 [connection signal="timeout" from="SFXTimer" to="." method="_on_sfx_timer_timeout"]
 [connection signal="area_entered" from="LockKey3" to="." method="_on_lock_key_3_area_entered"]
 [connection signal="area_entered" from="Escape2" to="." method="_on_escape_2_area_entered"]
+[connection signal="area_entered" from="LockCamerman" to="." method="_on_lock_camerman_area_entered"]
