@@ -49,7 +49,7 @@ fill_from = Vector2(0.486239, 0.5)
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(897, 510)
+position = Vector2(886, 476)
 collision_mask = 2
 script = ExtResource("1_60gqt")
 inventory = ExtResource("2_qas6k")
@@ -100,8 +100,8 @@ stream = ExtResource("9_xwo05")
 volume_db = -3.748
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(0.499978, -1.43051e-06)
-scale = Vector2(1.01, 1)
+position = Vector2(4, 3)
+scale = Vector2(1.59256, 1.31819)
 texture = SubResource("GradientTexture2D_31pxp")
 texture_scale = 6.48
 
