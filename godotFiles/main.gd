@@ -60,13 +60,25 @@ func _on_escape_area_entered(_area:Area2D):
 	else:
 		$HUD.show_message("You need at least 2 keys first!")
 	
-func _on_escape_2_area_entered(_area):
+func _on_escape_2_area_entered(_area:Area2D):
 	var itemCount = 0
 	for item in $Player.inventory.inventory:
 		if (item != null):
 			itemCount += 1
 		$ScoreTimer.stop()
 		$HUD.show_escaped2(itemCount)
+		$MainMusic.stop()
+		$PlayArea.hide()
+		$Path2D.set_process(false)
+		$ur_winnar.play()
+
+func _on_escape_3_area_entered(_area:Area2D):
+	var itemCount = 0
+	for item in $Player.inventory.inventory:
+		if (item != null):
+			itemCount += 1
+		$ScoreTimer.stop()
+		$HUD.show_escaped3(itemCount)
 		$MainMusic.stop()
 		$PlayArea.hide()
 		$Path2D.set_process(false)
@@ -100,3 +112,6 @@ func _on_lock_camerman_area_entered(_area):
 		$LockCamerman/LockCamermanSprite.hide()
 		$LockCamerman/LockCameramanHitbox2.queue_free()
 		$LockCameramanPlayerCollision/LockCameramanHitbox.set_deferred("disabled", true)
+
+
+

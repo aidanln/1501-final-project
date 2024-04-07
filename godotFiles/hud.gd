@@ -11,11 +11,10 @@ func _ready():
 func show_message(text):
 	$Message.text = text
 	$Message.show()
-	$MessageTimer.start()
+	#$MessageTimer.start()
 
 func show_game_over():
 	show_message("Game Over")
-	# Wait until the MessageTimer has counted down.
 	await $MessageTimer.timeout
 	$Message.show()
 
@@ -24,8 +23,8 @@ func show_escaped1(itemCount):
 		show_message("Good Job! You escaped through the main exit. However, you did not collect all of the keys.")
 	else :
 		show_message("Good Job! You escaped through the main exit while collecting all of the keys!")
-	# Wait until the MessageTimer has counted down.
-	await $MessageTimer.timeout
+	await get_tree().create_timer(5.0).timeout
+	$Message.hide()
 
 	# $Message.text = "Dodge the Creeps!"
 	# $Message.show()
@@ -36,8 +35,13 @@ func show_escaped2(itemCount):
 		show_message("Good Job! You escaped through the side exit. However, you did not collect all of the keys.")
 	else :
 		show_message("Good Job! You escaped Through the side exit while collecting all of the keys!")
-	# Wait until the MessageTimer has counted down.
-	await $MessageTimer.timeout
+	await get_tree().create_timer(5.0).timeout
+	$Message.hide()
+
+func show_escaped3(itemCount):
+	show_message("Good Job! You escaped through the secret exit while collecting all of the keys and saving the cameraman!")
+	await get_tree().create_timer(5.0).timeout
+	$Message.hide()
 
 func update_score(score):
 	$ScoreLabel.text = str(score)
