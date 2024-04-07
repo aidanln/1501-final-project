@@ -112,13 +112,13 @@ size = Vector2(862.98, 168)
 size = Vector2(367.157, 174)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iyovh"]
-size = Vector2(1504, 115)
+size = Vector2(1404, 92.9998)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_it2eh"]
-size = Vector2(647, 160)
+size = Vector2(593, 93)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08s4t"]
-size = Vector2(648, 159)
+size = Vector2(591, 91)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tbxtt"]
 size = Vector2(3890, 98.8442)
@@ -352,19 +352,19 @@ shape = SubResource("RectangleShape2D_r1j0y")
 
 [node name="CollisionShape2D47" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(685.5, 3053)
+position = Vector2(696.5, 3103)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_iyovh")
 
 [node name="CollisionShape2D48" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(998.5, 3846)
+position = Vector2(1025.5, 3775.5)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_it2eh")
 
 [node name="CollisionShape2D49" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(994, 2364.5)
+position = Vector2(1022.5, 2432.5)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_08s4t")
 
@@ -381,4 +381,5 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_2qupc")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
 blend_mode = 1
