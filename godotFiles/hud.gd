@@ -6,12 +6,13 @@ signal start_game
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$HelpMessage.hide()
+	$ScoreLabel.hide()
 
 # generic message changer
 func show_message(text):
 	$Message.text = text
 	$Message.show()
-	#$MessageTimer.start()
+	$MessageTimer.start()
 
 func show_game_over():
 	show_message("Game Over")
@@ -38,7 +39,7 @@ func show_escaped2(itemCount):
 	await get_tree().create_timer(5.0).timeout
 	$Message.hide()
 
-func show_escaped3(itemCount):
+func show_escaped3(_itemCount):
 	show_message("Good Job! You escaped through the secret exit while collecting all of the keys and saving the cameraman!")
 	await get_tree().create_timer(5.0).timeout
 	$Message.hide()
@@ -55,6 +56,7 @@ func _on_start_button_pressed():
 	$Menu/HBoxContainer/HelpButton.hide()
 	$Menu/HBoxContainer/QuitButton.hide()
 	$HelpMessage.hide()
+	$SubMessage.hide()
 	start_game.emit()
 
 func _on_message_timer_timeout():
