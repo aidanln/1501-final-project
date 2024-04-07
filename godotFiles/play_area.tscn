@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://d31yavvesmwla"]
+[gd_scene load_steps=45 format=3 uid="uid://d31yavvesmwla"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lrw6q"]
 size = Vector2(1355, 160)
@@ -97,10 +97,16 @@ size = Vector2(325.979, 189.5)
 size = Vector2(1119, 177)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nruox"]
-size = Vector2(2929, 39.52)
+size = Vector2(849, 39.52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ssc6"]
+size = Vector2(300, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qsmgu"]
+size = Vector2(50, 642.001)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa1rc"]
-size = Vector2(1817.91, 176)
+size = Vector2(1087, 176)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5sfjj"]
 size = Vector2(2147, 165)
@@ -322,13 +328,31 @@ shape = SubResource("RectangleShape2D_p42qw")
 
 [node name="CollisionShape2D40" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(4995.5, 4743)
+position = Vector2(5033.5, 4624)
 rotation = -3.14159
 shape = SubResource("RectangleShape2D_nruox")
 
+[node name="CollisionShape2D51" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(4729.5, 3984)
+rotation = -3.14159
+shape = SubResource("RectangleShape2D_2ssc6")
+
+[node name="CollisionShape2D42" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(4601.5, 4298)
+rotation = -3.14159
+shape = SubResource("RectangleShape2D_qsmgu")
+
+[node name="CollisionShape2D46" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(5473.5, 4301)
+rotation = -3.14159
+shape = SubResource("RectangleShape2D_qsmgu")
+
 [node name="CollisionShape2D41" type="CollisionShape2D" parent="."]
 z_index = 1
-position = Vector2(6456, 3819.96)
+position = Vector2(6456, 3454.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_wa1rc")
 
@@ -381,5 +405,4 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_2qupc")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-visible = false
 blend_mode = 1

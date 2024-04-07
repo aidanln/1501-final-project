@@ -37,14 +37,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -953.0
-offset_top = -219.0
-offset_right = 955.0
-offset_bottom = -45.0
+offset_left = -960.0
+offset_top = -340.0
+offset_right = 960.0
+offset_bottom = 260.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_65jik")
-theme_override_font_sizes/font_size = 156
+theme_override_font_sizes/font_size = 128
 text = "Abandoned
 "
 horizontal_alignment = 1
@@ -68,8 +68,9 @@ text = "Welcome to Abandoned!
 
 You are an influencer exploring an abandonded mansion with your camera man, when suddenly he goes missing at the hands of the mansion's butler.
 
-Use WASD to explore the house, hide from the butler, grab keys, unlock doors, and escape the house with your life.
-"
+Use 'WASD' to explore the house, hide from the butler, grab keys, unlock doors, and escape the house with your life.
+
+Start the game with 'Enter' and Exit with 'Esc'."
 label_settings = SubResource("LabelSettings_3jv6w")
 horizontal_alignment = 1
 autowrap_mode = 2
