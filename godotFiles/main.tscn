@@ -22,8 +22,8 @@
 [ext_resource type="Texture2D" uid="uid://batf6sdxbvkiu" path="res://art/Triangle Padlock - BRONZE - 0000.png" id="11_fo0og"]
 [ext_resource type="Texture2D" uid="uid://djp16tngotbg5" path="res://art/Inside_E.png" id="12_jvchl"]
 [ext_resource type="AudioStream" uid="uid://cflyerqj0ery2" path="res://music and sfx/win.mp3" id="13_lu7c2"]
-[ext_resource type="Texture2D" uid="uid://o50d1lbshacs" path="res://art/butler_rough (1).png" id="14_ehtl3"]
 [ext_resource type="Texture2D" uid="uid://ctlrspaewhkov" path="res://art/Red_BOXTRUCK_CLEAN_8D_000-sheet.png" id="23_5bibb"]
+[ext_resource type="Texture2D" uid="uid://dvbxavghd1wo6" path="res://art/cameraman.png" id="24_8mryo"]
 [ext_resource type="Texture2D" uid="uid://cwecdrby0sixt" path="res://art/doorSprite.png" id="23_ly4ci"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n4i7c"]
@@ -6238,8 +6238,12 @@ position = Vector2(2, 2)
 shape = SubResource("CircleShape2D_5u4iu")
 
 [node name="Sprite2D" type="Sprite2D" parent="Escape3"]
+z_index = 20
 position = Vector2(-1, -139)
-texture = ExtResource("14_ehtl3")
+texture = ExtResource("24_8mryo")
+
+[node name="SpawnPosition" type="Marker2D" parent="."]
+position = Vector2(885, 476)
 
 [node name="LockKey2" type="Area2D" parent="."]
 

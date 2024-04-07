@@ -8,13 +8,14 @@ func new_game():
 	$Player.start($StartPosition.position)
 	$StartTimer.start()
 	$HUD.update_score(score)
-	$HUD.show_message("Escape the Mansion!")
+	$HUD.show_start_message("Escape the Mansion!")
 	$MenuMusic.stop()
 	$MainMusic.play()
 	$PlayArea.show()
 	$Path2D.set_process(true)
 	$CanvasLayer.show()
 	$SFXTimer.start()
+	$Player.show()
 	
 
 # Called when the node enters the scene tree for the first time.
@@ -28,13 +29,20 @@ func _ready():
 func _process(_delta):
 	pass
 
-# called when player hits the butler
+# called when player hits the butler or they win
 func game_over():
 	$ScoreTimer.stop()
-	$HUD.show_game_over()
+	#$HUD.show_game_over()
 	$MainMusic.stop()
+	$MenuMusic.play()
 	$PlayArea.hide()
+	$CanvasLayer.hide()
+	$StartTimer.stop()
+	$SFXTimer.stop()
 	$Path2D.set_process(false)
+	get_tree().quit()
+
+
 
 func _on_score_timer_timeout():
 	score += 1
@@ -57,6 +65,9 @@ func _on_escape_area_entered(_area:Area2D):
 		$PlayArea.hide()
 		$Path2D.set_process(false)
 		$ur_winnar.play()
+		$Player.can_move = 0
+		await get_tree().create_timer(5.0).timeout
+		game_over()
 	else:
 		$HUD.show_message("You need at least 2 keys first!")
 	
@@ -71,6 +82,9 @@ func _on_escape_2_area_entered(_area:Area2D):
 		$PlayArea.hide()
 		$Path2D.set_process(false)
 		$ur_winnar.play()
+		$Player.can_move = 0
+		await get_tree().create_timer(5.0).timeout
+		game_over()
 
 func _on_escape_3_area_entered(_area:Area2D):
 	var itemCount = 0
@@ -83,6 +97,9 @@ func _on_escape_3_area_entered(_area:Area2D):
 		$PlayArea.hide()
 		$Path2D.set_process(false)
 		$ur_winnar.play()
+		$Player.can_move = 0
+		await get_tree().create_timer(5.0).timeout
+		game_over()
 
 func _on_sfx_timer_timeout():
 	var i = randi_range(1, 6)
