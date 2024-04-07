@@ -12,12 +12,17 @@ func _ready():
 func show_message(text):
 	$Message.text = text
 	$Message.show()
+	#$MessageTimer.start()
+
+func show_start_message(text):
+	$Message.text = text
+	$Message.show()
 	$MessageTimer.start()
 
 func show_game_over():
 	show_message("Game Over")
-	await $MessageTimer.timeout
-	$Message.show()
+	await get_tree().create_timer(5.0).timeout
+	#$Message.show()
 
 func show_escaped1(itemCount):
 	if (itemCount < 3) :
