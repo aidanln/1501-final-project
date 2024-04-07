@@ -58,7 +58,7 @@ func _on_escape_area_entered(_area:Area2D):
 		$Path2D.set_process(false)
 		$ur_winnar.play()
 	else:
-		$HUD.show_message("You need at least 2 keys first!")
+		$HUD.show_sub_message("You need at least 2 keys first!")
 	
 func _on_escape_2_area_entered(_area:Area2D):
 	var itemCount = 0
@@ -84,32 +84,44 @@ func _on_escape_3_area_entered(_area:Area2D):
 		$Path2D.set_process(false)
 		$ur_winnar.play()
 
+# handle the random voiceline
 func _on_sfx_timer_timeout():
 	var i = randi_range(1, 6)
 	if (i == 1) :
 		$Player/cameraman.play()
+		$HUD.show_sub_message("sfx1")
 	if (i == 2) :
 		$Player/hungry.play()
+		$HUD.show_sub_message("sfx2")
 	if (i == 3) :
 		$Player/imissmymom.play()
+		$HUD.show_sub_message("sfx3")
 	if (i == 4) :
 		$Player/leave.play()
+		$HUD.show_sub_message("sfx4")
 	if (i == 5) :
 		$Player/whatwasthat.play()
+		$HUD.show_sub_message("sfx5")
 	if (i == 6) :
 		$Player/whereami.play()
+		$HUD.show_sub_message("sfx6")
 
 func _on_lock_key_3_area_entered(_area):
-	if ($Player.inventory.inventory[1] != null) :
+	if ($Player.inventory.inventory[1] != null):
 		$LockKey3/LockKey3Sprite.hide()
 		$LockKey3/LockKey3Hitbox2.queue_free()
 		$LockKey3PlayerCollision/LockKey3Hitbox.set_deferred("disabled", true)
+	else:
+		$HUD.show_sub_message("Locked. Looks like you need 2 keys to open this door...")
 
+# handles 
 func _on_lock_camerman_area_entered(_area):
-	if ($Player.inventory.inventory[2] != null) :
+	if ($Player.inventory.inventory[2] != null):
 		$LockCamerman/LockCamermanSprite.hide()
 		$LockCamerman/LockCameramanHitbox2.queue_free()
 		$LockCameramanPlayerCollision/LockCameramanHitbox.set_deferred("disabled", true)
+	else:
+		$HUD.show_sub_message("Locked. Looks like you need 3 keys to open this door...")
 
 # if escape is clicked, close the game (its fullscreen so this is needed)
 func _input(_event):
