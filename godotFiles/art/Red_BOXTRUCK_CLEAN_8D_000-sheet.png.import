@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctdmeeebjeaaj"
-path="res://.godot/imported/Blue_BOXTRUCK_CLEAN_8D_000-sheet.png-9d044c6ff56bd755ef8474a9e16ad7a4.ctex"
+uid="uid://ctlrspaewhkov"
+path="res://.godot/imported/Red_BOXTRUCK_CLEAN_8D_000-sheet.png-79f98663fe90b3d130aaf3ca13604388.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/TopDown Vehicles v1.17/BOX TRUCK TOPDOWN/Blue/Blue_BOXTRUCK_CLEAN_8D_000-sheet.png"
-dest_files=["res://.godot/imported/Blue_BOXTRUCK_CLEAN_8D_000-sheet.png-9d044c6ff56bd755ef8474a9e16ad7a4.ctex"]
+source_file="res://art/Red_BOXTRUCK_CLEAN_8D_000-sheet.png"
+dest_files=["res://.godot/imported/Red_BOXTRUCK_CLEAN_8D_000-sheet.png-79f98663fe90b3d130aaf3ca13604388.ctex"]
 
 [params]
 
