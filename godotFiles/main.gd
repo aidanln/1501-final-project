@@ -109,15 +109,23 @@ func _on_sfx_timer_timeout():
 func _on_lock_key_3_area_entered(_area):
 	if ($Player.inventory.inventory[1] != null):
 		$LockKey3/LockKey3Sprite.hide()
+		$LockKey3/DoorSprite.hide()
 		$LockKey3/LockKey3Hitbox2.queue_free()
 		$LockKey3PlayerCollision/LockKey3Hitbox.set_deferred("disabled", true)
 	else:
 		$HUD.show_sub_message("Locked. Looks like you need 2 keys to open this door...")
 
-# handles 
+func _on_lock_key_2_area_entered(area:Area2D):
+	if ($Player.inventory.inventory[0] != null) :
+		$LockKey2/LockKey2Sprite.hide()
+		$LockKey2/DoorSprite3.hide()
+		$LockKey2/LockKey2Hitbox2.queue_free()
+		$LockKey2PlayerCollision2/LockKey2Hitbox.set_deferred("disabled", true)
+
 func _on_lock_camerman_area_entered(_area):
 	if ($Player.inventory.inventory[2] != null):
 		$LockCamerman/LockCamermanSprite.hide()
+		$LockCamerman/DoorSprite2.hide()
 		$LockCamerman/LockCameramanHitbox2.queue_free()
 		$LockCameramanPlayerCollision/LockCameramanHitbox.set_deferred("disabled", true)
 	else:
@@ -127,3 +135,5 @@ func _on_lock_camerman_area_entered(_area):
 func _input(_event):
 	if Input.is_action_pressed("quit_game"):
 		get_tree().quit()
+
+
