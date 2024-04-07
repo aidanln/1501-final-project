@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://124rp1mj0ued"]
+[gd_scene load_steps=23 format=3 uid="uid://124rp1mj0ued"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_8okua"]
 [ext_resource type="PackedScene" uid="uid://cmw085wbs6130" path="res://player.tscn" id="2_gnskr"]
@@ -1258,7 +1258,6 @@ stream = ExtResource("7_c7vci")
 volume_db = -6.419
 
 [node name="PlayArea" parent="." instance=ExtResource("7_j8e16")]
-visible = false
 z_index = 25
 position = Vector2(44, 565)
 
