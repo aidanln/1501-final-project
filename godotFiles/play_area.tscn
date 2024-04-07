@@ -405,4 +405,3 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_2qupc")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-blend_mode = 1
