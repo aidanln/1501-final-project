@@ -4,6 +4,9 @@ signal hit
 
 @export var speed = 500 # player speed (pixels/sec)
 @export var inventory: Inventory
+
+var can_move = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	hide()
@@ -15,8 +18,10 @@ func _process(_delta):
 		self.velocity = direction * speed
 	else :
 		self.velocity = Vector2.ZERO
-		
-	move_and_slide()
+	
+	# only move if "can_move" is true
+	if (can_move):
+		move_and_slide()
 	
 	if self.velocity.length() > 0:
 		self.velocity = self.velocity.normalized() * speed
@@ -30,11 +35,11 @@ func _process(_delta):
 	elif velocity.y != 0:
 		$AnimatedSprite2D.animation = "walk"
 	
-	
 func start(pos):
 	position = pos
 	show()
 	$CollisionShape2D.disabled = false
+	can_move = 1
 
 func get_inventory() :
 	return inventory
