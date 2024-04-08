@@ -6010,7 +6010,8 @@ height = 50.0
 size = Vector2(155, 45)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1y1xn"]
-height = 50.0
+radius = 42.0
+height = 108.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_py83v"]
 size = Vector2(133, 60)
@@ -6053,7 +6054,7 @@ rotates = false
 [node name="Mob" parent="Path2D/PathFollow2D" instance=ExtResource("2_pgsrf")]
 z_index = 10
 z_as_relative = false
-position = Vector2(10.458, 3.86133)
+position = Vector2(-0.0927811, -17.3496)
 collision_layer = 4
 
 [node name="WallsGroundDoors" type="TileMap" parent="."]
@@ -6127,7 +6128,6 @@ stream = ExtResource("7_c7vci")
 volume_db = -9.23
 
 [node name="PlayArea" parent="." instance=ExtResource("7_j8e16")]
-visible = false
 z_index = 25
 position = Vector2(44, 565)
 
@@ -6240,17 +6240,15 @@ volume_db = -2.15
 pitch_scale = 1.53
 
 [node name="Escape3" type="Area2D" parent="."]
-position = Vector2(6778, 3288)
+position = Vector2(6780, 3283)
 
 [node name="EscapeHitbox3" type="CollisionShape2D" parent="Escape3"]
 z_index = 100
-position = Vector2(2, 2)
-rotation = 1.5708
 shape = SubResource("CapsuleShape2D_1y1xn")
 
-[node name="Sprite2D" type="Sprite2D" parent="Escape3"]
+[node name="Cameraman" type="Sprite2D" parent="Escape3"]
 z_index = 20
-position = Vector2(-1, -139)
+position = Vector2(20, -90)
 texture = ExtResource("24_8mryo")
 
 [node name="SpawnPosition" type="Marker2D" parent="."]

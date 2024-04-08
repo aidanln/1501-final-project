@@ -16,7 +16,7 @@ func new_game():
 	$CanvasLayer.show()
 	$SFXTimer.start()
 	$Player.show()
-	# spawn_butler()
+	$Path2D/PathFollow2D/Mob.spawn_butler()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,11 +24,6 @@ func _ready():
 	$Path2D.set_process(false)
 	$CanvasLayer.hide()
 	$MenuMusic.play()
-
-# Randomizes butler spawn and which way he pathfinds, currently broken
-func spawn_butler():
-	var mob_spawn_location = $Path2D/PathFollow2D/Mob.position
-	mob_spawn_location.progress_ratio = randf()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
