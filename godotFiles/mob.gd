@@ -1,6 +1,6 @@
 extends CharacterBody2D
 @onready var path_follow = get_parent()
-var speed = 300
+var speed = 320
 var direction = 0
 
 signal playerDetected
@@ -18,5 +18,5 @@ func _process(delta):
 	direction = (pos.angle_to_point(prepos)/3.14)*180
 
 # will only be called on the player entering (i.e. collision layer 4)
-func _on_area_2d_body_entered(body:Node2D):
+func _on_area_2d_body_entered(_body:Node2D):
 	playerDetected.emit()

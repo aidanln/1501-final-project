@@ -16,7 +16,7 @@ func new_game():
 	$CanvasLayer.show()
 	$SFXTimer.start()
 	$Player.show()
-	
+	# spawn_butler()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,6 +24,11 @@ func _ready():
 	$Path2D.set_process(false)
 	$CanvasLayer.hide()
 	$MenuMusic.play()
+
+# Randomizes butler spawn and which way he pathfinds, currently broken
+func spawn_butler():
+	var mob_spawn_location = $Path2D/PathFollow2D/Mob.position
+	mob_spawn_location.progress_ratio = randf()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -41,8 +46,6 @@ func game_over():
 	$SFXTimer.stop()
 	$Path2D.set_process(false)
 	get_tree().quit()
-
-
 
 func _on_score_timer_timeout():
 	score += 1
@@ -166,4 +169,4 @@ func _input(_event):
 
 # called if player gets within mob detection radius
 func _on_player_detected():
-	$HUD.show_start_message("you SUCK!")
+	$HUD.show_start_message("JUMPSCARE!") # replace with actual jumpscare

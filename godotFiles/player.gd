@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 signal hit
 
-@export var speed = 500 # player speed (pixels/sec)
+@export var speed = 420 # player speed (pixels/sec)
 @export var inventory: Inventory
 
 var can_move = 0

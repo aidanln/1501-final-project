@@ -91,7 +91,7 @@ func _on_sub_message_timer_timeout():
 func _on_help_button_pressed():
 	$Message.hide()
 	$HelpMessage.show()
-	await get_tree().create_timer(10.0).timeout
+	await get_tree().create_timer(15.0).timeout
 	$Message.show()
 	$HelpMessage.hide()
 
