@@ -1,8 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://cmw085wbs6130"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_60gqt"]
-[ext_resource type="Texture2D" uid="uid://caek78jyd7k3e" path="res://art/guy_rough.png" id="2_cv5dc"]
 [ext_resource type="Resource" uid="uid://7oogkor15a0y" path="res://inventory/playerinventory.tres" id="2_qas6k"]
+[ext_resource type="Texture2D" uid="uid://da6ridxmes3dl" path="res://art/guy.png" id="3_wuc8j"]
 [ext_resource type="AudioStream" uid="uid://c8qd3l50bbfp6" path="res://music and sfx/cameraman.mp3" id="4_cxls2"]
 [ext_resource type="AudioStream" uid="uid://cjs6nofumfrqq" path="res://music and sfx/hungry.mp3" id="5_x3pl5"]
 [ext_resource type="AudioStream" uid="uid://b07bipewltqiu" path="res://music and sfx/Imissmymom.mp3" id="6_oq0sp"]
@@ -14,7 +14,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_cv5dc")
+"texture": ExtResource("3_wuc8j")
 }],
 "loop": true,
 "name": &"up",
@@ -22,7 +22,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_cv5dc")
+"texture": ExtResource("3_wuc8j")
 }],
 "loop": true,
 "name": &"walk",
@@ -60,7 +60,7 @@ metadata/_edit_group_ = true
 position = Vector2(0, 0.499998)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_e52j1")
-animation = &"walk"
+animation = &"up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.5, 0.5)
