@@ -26,6 +26,12 @@
 [ext_resource type="Texture2D" uid="uid://cwecdrby0sixt" path="res://art/doorSprite.png" id="23_ly4ci"]
 [ext_resource type="Texture2D" uid="uid://dvbxavghd1wo6" path="res://art/cameraman.png" id="24_8mryo"]
 
+[sub_resource type="Curve2D" id="Curve2D_fgtdf"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 5132, -3077, 0, 0, 0, 0, 2133, -2968, 0, 0, 0, 0, 2251, -2130, 0, 0, 0, 0, 2665, -1965, 0, 0, 0, 0, 2649, -1610, 0, 0, 0, 0, 1975, -1342, 0, 0, 0, 0, 1674, -1363, 0, 0, 0, 0, 1190, -1699, 0, 0, 0, 0, 1181, -2011, 0, 0, 0, 0, 681, -2021, 0, 0, 0, 0, 947, -2375, 0, 0, 0, 0, 1392, -2372, 0, 0, 0, 0, 1227, -2014, 0, 0, 0, 0, 1145, -1236, 0, 0, 0, 0, 1241, -427, 0, 0, 0, 0, 702, -353, 0, 0, 0, 0, 690, 613, 0, 0, 0, 0, 1787, 680, 0, 0, 0, 0, 2433, 328, 0, 0, 0, 0, 3697, 318, 0, 0, 0, 0, 4283, 106, 0, 0, 0, 0, 4810, 142, 0, 0, 0, 0, 5115, 408, 0, 0, 0, 0, 5331, 189, 0, 0, 0, 0, 5113, -125, 0, 0, 0, 0, 4954, 105, 0, 0, 0, 0, 4391, 134, 0, 0, 0, 0, 4438, -491, 0, 0, 0, 0, 4655, -869, 0, 0, 0, 0, 4658, -1081, 0, 0, 0, 0, 5326, -1102, 0, 0, 0, 0, 5362, -1601, 0, 0, 0, 0, 5679, -1771, 0, 0, 0, 0, 5367, -1984, 0, 0, 0, 0, 5073, -1737, 0, 0, 0, 0, 5019, -1111, 0, 0, 0, 0, 4298, -1074, 0, 0, 0, 0, 3875, -1333, 0, 0, 0, 0, 3870, -1729, 0, 0, 0, 0, 4649, -1701, 0, 0, 0, 0, 4226, -2140, 0, 0, 0, 0, 3850, -1806, 0, 0, 0, 0, 3851, -1241, 0, 0, 0, 0, 3693, -1098, 0, 0, 0, 0, 3207, -1170, 0, 0, 0, 0, 2820, -1455, 0, 0, 0, 0, 2641, -1707, 0, 0, 0, 0, 2672, -2204, 0, 0, 0, 0, 2953, -2552, 0, 0, 0, 0, 3582, -2532, 0, 0, 0, 0, 4292, -2532, 0, 0, 0, 0, 4716, -2730, 0, 0, 0, 0, 5132, -3077)
+}
+point_count = 53
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n4i7c"]
 texture = ExtResource("9_yxjnr")
 0:0/0 = 0
@@ -5988,12 +5994,6 @@ sources/0 = SubResource("TileSetAtlasSource_f51oc")
 sources/1 = SubResource("TileSetAtlasSource_0g0cv")
 sources/2 = SubResource("TileSetAtlasSource_t2dl7")
 
-[sub_resource type="Curve2D" id="Curve2D_fgtdf"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 5132, -3077, 0, 0, 0, 0, 2133, -2968, 0, 0, 0, 0, 2251, -2130, 0, 0, 0, 0, 2665, -1965, 0, 0, 0, 0, 2649, -1610, 0, 0, 0, 0, 1975, -1342, 0, 0, 0, 0, 1674, -1363, 0, 0, 0, 0, 1190, -1699, 0, 0, 0, 0, 1181, -2011, 0, 0, 0, 0, 681, -2021, 0, 0, 0, 0, 947, -2375, 0, 0, 0, 0, 1392, -2372, 0, 0, 0, 0, 1227, -2014, 0, 0, 0, 0, 1145, -1236, 0, 0, 0, 0, 1241, -427, 0, 0, 0, 0, 702, -353, 0, 0, 0, 0, 690, 613, 0, 0, 0, 0, 1787, 680, 0, 0, 0, 0, 2433, 328, 0, 0, 0, 0, 3697, 318, 0, 0, 0, 0, 4283, 106, 0, 0, 0, 0, 4810, 142, 0, 0, 0, 0, 5115, 408, 0, 0, 0, 0, 5331, 189, 0, 0, 0, 0, 5113, -125, 0, 0, 0, 0, 4954, 105, 0, 0, 0, 0, 4391, 134, 0, 0, 0, 0, 4438, -491, 0, 0, 0, 0, 4655, -869, 0, 0, 0, 0, 4658, -1081, 0, 0, 0, 0, 5326, -1102, 0, 0, 0, 0, 5362, -1601, 0, 0, 0, 0, 5679, -1771, 0, 0, 0, 0, 5367, -1984, 0, 0, 0, 0, 5073, -1737, 0, 0, 0, 0, 5019, -1111, 0, 0, 0, 0, 4298, -1074, 0, 0, 0, 0, 3875, -1333, 0, 0, 0, 0, 3870, -1729, 0, 0, 0, 0, 4649, -1701, 0, 0, 0, 0, 4226, -2140, 0, 0, 0, 0, 3850, -1806, 0, 0, 0, 0, 3851, -1241, 0, 0, 0, 0, 3693, -1098, 0, 0, 0, 0, 3207, -1170, 0, 0, 0, 0, 2820, -1455, 0, 0, 0, 0, 2641, -1707, 0, 0, 0, 0, 2672, -2204, 0, 0, 0, 0, 2953, -2552, 0, 0, 0, 0, 3582, -2532, 0, 0, 0, 0, 4292, -2532, 0, 0, 0, 0, 4716, -2730, 0, 0, 0, 0, 5132, -3077)
-}
-point_count = 53
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t1j5a"]
 height = 50.0
 
@@ -6037,6 +6037,22 @@ expand_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("2_gnskr")]
 y_sort_enabled = false
+collision_mask = 6
+
+[node name="Path2D" type="Path2D" parent="."]
+z_index = 1
+position = Vector2(933, 3841)
+curve = SubResource("Curve2D_fgtdf")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(5041.87, -3073.72)
+progress = 90.19
+rotates = false
+
+[node name="Mob" parent="Path2D/PathFollow2D" instance=ExtResource("2_pgsrf")]
+z_index = 10
+z_as_relative = false
+position = Vector2(10.458, 3.86133)
 
 [node name="WallsGroundDoors" type="TileMap" parent="."]
 z_as_relative = false
@@ -6112,21 +6128,6 @@ volume_db = -9.23
 visible = false
 z_index = 25
 position = Vector2(44, 565)
-
-[node name="Path2D" type="Path2D" parent="."]
-z_index = 1
-position = Vector2(933, 3841)
-curve = SubResource("Curve2D_fgtdf")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(5041.87, -3073.72)
-progress = 90.19
-rotates = false
-
-[node name="Mob" parent="Path2D/PathFollow2D" instance=ExtResource("2_pgsrf")]
-z_index = 10
-z_as_relative = false
-position = Vector2(10.458, 3.86133)
 
 [node name="Key" parent="." instance=ExtResource("8_4k2ba")]
 z_index = 30
