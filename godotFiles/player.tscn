@@ -30,12 +30,12 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vss70"]
-radius = 54.0
-height = 148.0
+radius = 30.0
+height = 140.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_665m7"]
-radius = 54.0
-height = 148.0
+radius = 30.0
+height = 140.0
 
 [sub_resource type="Gradient" id="Gradient_ralpo"]
 offsets = PackedFloat32Array(0, 0.694805)
@@ -69,6 +69,7 @@ shape = SubResource("CapsuleShape2D_vss70")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
+position_smoothing_speed = 6.0
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -102,7 +103,15 @@ volume_db = 5.0
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(4, 4)
-scale = Vector2(1.25, 1.25)
+scale = Vector2(2, 1.2)
+energy = 0.4
+texture = SubResource("GradientTexture2D_31pxp")
+texture_scale = 8.0
+
+[node name="InnerLight" type="PointLight2D" parent="."]
+position = Vector2(4, 4)
+scale = Vector2(0.8, 0.8)
+energy = 0.4
 texture = SubResource("GradientTexture2D_31pxp")
 texture_scale = 8.0
 

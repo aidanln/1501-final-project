@@ -16,7 +16,7 @@ func new_game():
 	$CanvasLayer.show()
 	$SFXTimer.start()
 	$Player.show()
-	
+	$Path2D/PathFollow2D/Mob.spawn_butler()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -41,8 +41,6 @@ func game_over():
 	$SFXTimer.stop()
 	$Path2D.set_process(false)
 	get_tree().quit()
-
-
 
 func _on_score_timer_timeout():
 	score += 1
@@ -164,4 +162,6 @@ func _input(_event):
 	if Input.is_action_pressed("quit_game"):
 		get_tree().quit()
 
-
+# called if player gets within mob detection radius
+func _on_player_detected():
+	$HUD.show_start_message("JUMPSCARE!") # replace with actual jumpscare
