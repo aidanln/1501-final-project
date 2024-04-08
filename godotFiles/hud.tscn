@@ -99,6 +99,10 @@ autowrap_mode = 2
 wait_time = 2.0
 one_shot = true
 
+[node name="SubMessageTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [node name="Menu" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 7
@@ -153,6 +157,7 @@ shortcut_in_tooltip = false
 text = "Quit"
 
 [connection signal="timeout" from="MessageTimer" to="." method="_on_message_timer_timeout"]
+[connection signal="timeout" from="SubMessageTimer" to="." method="_on_sub_message_timer_timeout"]
 [connection signal="pressed" from="Menu/HBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Menu/HBoxContainer/HelpButton" to="." method="_on_help_button_pressed"]
 [connection signal="pressed" from="Menu/HBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
