@@ -23,8 +23,8 @@
 [ext_resource type="Texture2D" uid="uid://djp16tngotbg5" path="res://art/Inside_E.png" id="12_jvchl"]
 [ext_resource type="AudioStream" uid="uid://cflyerqj0ery2" path="res://music and sfx/win.mp3" id="13_lu7c2"]
 [ext_resource type="Texture2D" uid="uid://ctlrspaewhkov" path="res://art/Red_BOXTRUCK_CLEAN_8D_000-sheet.png" id="23_5bibb"]
-[ext_resource type="Texture2D" uid="uid://dvbxavghd1wo6" path="res://art/cameraman.png" id="24_8mryo"]
 [ext_resource type="Texture2D" uid="uid://cwecdrby0sixt" path="res://art/doorSprite.png" id="23_ly4ci"]
+[ext_resource type="Texture2D" uid="uid://dvbxavghd1wo6" path="res://art/cameraman.png" id="24_8mryo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n4i7c"]
 texture = ExtResource("9_yxjnr")
@@ -6124,7 +6124,8 @@ progress = 90.19
 rotates = false
 
 [node name="Mob" parent="Path2D/PathFollow2D" instance=ExtResource("2_pgsrf")]
-z_index = 2
+z_index = 10
+z_as_relative = false
 position = Vector2(10.458, 3.86133)
 
 [node name="Key" parent="." instance=ExtResource("8_4k2ba")]
