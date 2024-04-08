@@ -12,7 +12,7 @@ signal playerDetected
 func _ready():
 	# random animation
 	$AnimatedSprite2D.play("walk")
-	print("current path_dir = " + path_dir)
+	print(path_dir)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
