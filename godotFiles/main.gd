@@ -69,7 +69,7 @@ func _on_escape_area_entered(_area:Area2D):
 		await get_tree().create_timer(5.0).timeout
 		game_over()
 	else:
-		$HUD.show_message("You need at least 2 keys first!")
+		$HUD.show_sub_message("You need at least 2 keys first!")
 	
 func _on_escape_2_area_entered(_area:Area2D):
 	var itemCount = 0
@@ -101,41 +101,63 @@ func _on_escape_3_area_entered(_area:Area2D):
 		await get_tree().create_timer(5.0).timeout
 		game_over()
 
+# handle the random voiceline
 func _on_sfx_timer_timeout():
 	var i = randi_range(1, 6)
 	if (i == 1) :
 		$Player/cameraman.play()
+		$HUD.show_sub_message_no_timer('You: "This stupid cameraman, what an idiot! Now I have to go back and look for him in the terribly scary place..."')
+		# custom timer cuz this line is very long
+		await get_tree().create_timer(5.0).timeout
+		$HUD/SubMessage.hide()
 	if (i == 2) :
 		$Player/hungry.play()
+		$HUD.show_sub_message('You: "Im hungry."')
 	if (i == 3) :
 		$Player/imissmymom.play()
+		$HUD.show_sub_message('You: "God I miss my mom!"')
 	if (i == 4) :
 		$Player/leave.play()
+		$HUD.show_sub_message_no_timer('You: "Man this place really sucks, I really just want to leave!"')
+		# custom timer cuz this line is very long
+		await get_tree().create_timer(3.0).timeout
+		$HUD/SubMessage.hide()
 	if (i == 5) :
 		$Player/whatwasthat.play()
+		$HUD.show_sub_message_no_timer('You: "Shoot, what was that? Did I hear something?"')
+		# custom timer cuz this line is very long
+		await get_tree().create_timer(3.0).timeout
+		$HUD/SubMessage.hide()
 	if (i == 6) :
 		$Player/whereami.play()
+		$HUD.show_sub_message('You: "Man, I am REALLY lost, where am I?"')
 
 func _on_lock_key_3_area_entered(_area):
-	if ($Player.inventory.inventory[1] != null) :
+	if ($Player.inventory.inventory[1] != null):
 		$LockKey3/LockKey3Sprite.hide()
 		$LockKey3/DoorSprite.hide()
 		$LockKey3/LockKey3Hitbox2.queue_free()
 		$LockKey3PlayerCollision/LockKey3Hitbox.set_deferred("disabled", true)
+	else:
+		$HUD.show_sub_message("Locked. Looks like you need 2 keys to open this door...")
 
-func _on_lock_key_2_area_entered(area:Area2D):
+func _on_lock_key_2_area_entered(_area:Area2D):
 	if ($Player.inventory.inventory[0] != null) :
 		$LockKey2/LockKey2Sprite.hide()
 		$LockKey2/DoorSprite3.hide()
 		$LockKey2/LockKey2Hitbox2.queue_free()
 		$LockKey2PlayerCollision2/LockKey2Hitbox.set_deferred("disabled", true)
+	else:
+		$HUD.show_sub_message("Locked. Looks like you need a key to open this door...")
 
 func _on_lock_camerman_area_entered(_area):
-	if ($Player.inventory.inventory[2] != null) :
+	if ($Player.inventory.inventory[2] != null):
 		$LockCamerman/LockCamermanSprite.hide()
 		$LockCamerman/DoorSprite2.hide()
 		$LockCamerman/LockCameramanHitbox2.queue_free()
 		$LockCameramanPlayerCollision/LockCameramanHitbox.set_deferred("disabled", true)
+	else:
+		$HUD.show_sub_message("Locked. Looks like you need 3 keys to open this door...")
 
 # if escape is clicked, close the game (its fullscreen so this is needed)
 func _input(_event):

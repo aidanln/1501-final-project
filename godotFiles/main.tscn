@@ -23,8 +23,8 @@
 [ext_resource type="Texture2D" uid="uid://djp16tngotbg5" path="res://art/Inside_E.png" id="12_jvchl"]
 [ext_resource type="AudioStream" uid="uid://cflyerqj0ery2" path="res://music and sfx/win.mp3" id="13_lu7c2"]
 [ext_resource type="Texture2D" uid="uid://ctlrspaewhkov" path="res://art/Red_BOXTRUCK_CLEAN_8D_000-sheet.png" id="23_5bibb"]
-[ext_resource type="Texture2D" uid="uid://dvbxavghd1wo6" path="res://art/cameraman.png" id="24_8mryo"]
 [ext_resource type="Texture2D" uid="uid://cwecdrby0sixt" path="res://art/doorSprite.png" id="23_ly4ci"]
+[ext_resource type="Texture2D" uid="uid://dvbxavghd1wo6" path="res://art/cameraman.png" id="24_8mryo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n4i7c"]
 texture = ExtResource("9_yxjnr")
@@ -6001,7 +6001,7 @@ radius = 48.4
 size = Vector2(155, 45)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2gupo"]
-size = Vector2(149.5, 62.5)
+size = Vector2(149.5, 69.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cce8g"]
 radius = 48.4
@@ -6013,10 +6013,10 @@ size = Vector2(155, 45)
 radius = 48.4
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_py83v"]
-size = Vector2(133, 43)
+size = Vector2(133, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17c50"]
-size = Vector2(149, 22)
+size = Vector2(149, 34)
 
 [node name="Main" type="Node"]
 script = ExtResource("1_8okua")
@@ -6109,6 +6109,7 @@ stream = ExtResource("7_c7vci")
 volume_db = -9.23
 
 [node name="PlayArea" parent="." instance=ExtResource("7_j8e16")]
+visible = false
 z_index = 25
 position = Vector2(44, 565)
 
@@ -6123,7 +6124,8 @@ progress = 90.19
 rotates = false
 
 [node name="Mob" parent="Path2D/PathFollow2D" instance=ExtResource("2_pgsrf")]
-z_index = 2
+z_index = 10
+z_as_relative = false
 position = Vector2(10.458, 3.86133)
 
 [node name="Key" parent="." instance=ExtResource("8_4k2ba")]
@@ -6267,7 +6269,7 @@ texture = ExtResource("23_ly4ci")
 
 [node name="LockKey2Hitbox2" type="CollisionShape2D" parent="LockKey2"]
 z_index = 101
-position = Vector2(2113.5, 2039.5)
+position = Vector2(2113.5, 2048)
 shape = SubResource("RectangleShape2D_py83v")
 
 [node name="LockKey2PlayerCollision2" type="StaticBody2D" parent="."]
@@ -6275,7 +6277,7 @@ collision_layer = 2
 
 [node name="LockKey2Hitbox" type="CollisionShape2D" parent="LockKey2PlayerCollision2"]
 z_index = 101
-position = Vector2(2122, 2033)
+position = Vector2(2114, 2032)
 shape = SubResource("RectangleShape2D_17c50")
 
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
