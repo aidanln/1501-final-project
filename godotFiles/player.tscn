@@ -103,7 +103,15 @@ volume_db = 5.0
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(4, 4)
-scale = Vector2(1.25, 1.25)
+scale = Vector2(2, 1.2)
+energy = 0.4
+texture = SubResource("GradientTexture2D_31pxp")
+texture_scale = 8.0
+
+[node name="InnerLight" type="PointLight2D" parent="."]
+position = Vector2(4, 4)
+scale = Vector2(0.8, 0.8)
+energy = 0.4
 texture = SubResource("GradientTexture2D_31pxp")
 texture_scale = 8.0
 

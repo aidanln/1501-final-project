@@ -1,6 +1,6 @@
 extends CharacterBody2D
 @onready var path_follow = get_parent()
-var speed = 300
+var speed = 350
 var direction = 0
 
 # either 0 or 1, decides which way the butler will travel the path
