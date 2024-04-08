@@ -20,6 +20,11 @@ func show_sub_message(text):
 	$SubMessage.show()
 	$SubMessageTimer.start()
 
+# generic sub-message changer
+func show_sub_message_no_timer(text):
+	$SubMessage.text = text
+	$SubMessage.show()
+
 func show_game_over():
 	show_message("Game Over")
 	await $MessageTimer.timeout

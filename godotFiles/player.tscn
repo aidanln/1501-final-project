@@ -78,7 +78,7 @@ shape = SubResource("CapsuleShape2D_665m7")
 
 [node name="cameraman" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_cxls2")
-volume_db = -3.748
+volume_db = 2.0
 
 [node name="hungry" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_x3pl5")
