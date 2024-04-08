@@ -6037,6 +6037,7 @@ expand_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("2_gnskr")]
 y_sort_enabled = false
+collision_layer = 9
 collision_mask = 6
 
 [node name="Path2D" type="Path2D" parent="."]
@@ -6053,6 +6054,7 @@ rotates = false
 z_index = 10
 z_as_relative = false
 position = Vector2(10.458, 3.86133)
+collision_layer = 4
 
 [node name="WallsGroundDoors" type="TileMap" parent="."]
 z_as_relative = false
@@ -6287,6 +6289,7 @@ z_index = 101
 position = Vector2(2114, 2032)
 shape = SubResource("RectangleShape2D_17c50")
 
+[connection signal="playerDetected" from="Path2D/PathFollow2D/Mob" to="." method="_on_player_detected"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
 [connection signal="start_game" from="HUD" to="." method="new_game"]

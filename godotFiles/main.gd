@@ -164,4 +164,6 @@ func _input(_event):
 	if Input.is_action_pressed("quit_game"):
 		get_tree().quit()
 
-
+# called if player gets within mob detection radius
+func _on_player_detected():
+	$HUD.show_start_message("you SUCK!")
