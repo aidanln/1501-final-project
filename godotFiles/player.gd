@@ -39,7 +39,6 @@ func start(pos):
 	position = pos
 	show()
 	$CollisionShape2D.disabled = false
-	can_move = 1
 
 func get_inventory() :
 	return inventory

@@ -6122,10 +6122,12 @@ position = Vector2(5073, 4915)
 [node name="MenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_7gqrp")
 volume_db = -9.934
+bus = &"Everything else"
 
 [node name="MainMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_c7vci")
 volume_db = -9.23
+bus = &"Everything else"
 
 [node name="PlayArea" parent="." instance=ExtResource("7_j8e16")]
 z_index = 25
@@ -6238,6 +6240,7 @@ texture = ExtResource("23_ly4ci")
 stream = ExtResource("13_lu7c2")
 volume_db = -2.15
 pitch_scale = 1.53
+bus = &"Everything else"
 
 [node name="Escape3" type="Area2D" parent="."]
 position = Vector2(6780, 3283)

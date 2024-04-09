@@ -9,6 +9,9 @@ func new_game():
 	$StartTimer.start()
 	$HUD.update_score(score)
 	$HUD.show_start_message("Escape the Mansion!")
+	$HUD.show_exposition()
+	$Player.can_move = 1
+	$Player/Scream.play()
 	$MenuMusic.stop()
 	$MainMusic.play()
 	$PlayArea.show()
@@ -24,6 +27,7 @@ func _ready():
 	$Path2D.set_process(false)
 	$CanvasLayer.hide()
 	$MenuMusic.play()
+	$Player.can_move = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -31,16 +35,16 @@ func _process(_delta):
 
 # called when player hits the butler or they win
 func game_over():
+	$HUD/SubMessage.queue_free()
+	AudioServer.set_bus_mute(2, true)
 	$ScoreTimer.stop()
 	#$HUD.show_game_over()
 	$MainMusic.stop()
 	$MenuMusic.play()
 	$PlayArea.hide()
-	$CanvasLayer.hide()
 	$StartTimer.stop()
 	$SFXTimer.stop()
 	$Path2D.set_process(false)
-	get_tree().quit()
 
 func _on_score_timer_timeout():
 	score += 1
@@ -58,13 +62,16 @@ func _on_escape_area_entered(_area:Area2D):
 			itemCount += 1
 	if (itemCount > 1):
 		$ScoreTimer.stop()
+		$Player.can_move = 0
 		$HUD.show_escaped1(itemCount)
 		$MainMusic.stop()
 		$PlayArea.hide()
+		$CanvasLayer.hide()
 		$Path2D.set_process(false)
 		$ur_winnar.play()
-		$Player.can_move = 0
-		await get_tree().create_timer(5.0).timeout
+		$HUD/Black.show()
+		$CanvasLayer/Control.hide()
+		await get_tree().create_timer(3.0).timeout
 		game_over()
 	else:
 		$HUD.show_sub_message("You need at least 2 keys first!")
@@ -75,13 +82,15 @@ func _on_escape_2_area_entered(_area:Area2D):
 		if (item != null):
 			itemCount += 1
 		$ScoreTimer.stop()
+		$Player.can_move = 0
 		$HUD.show_escaped2(itemCount)
 		$MainMusic.stop()
 		$PlayArea.hide()
 		$Path2D.set_process(false)
 		$ur_winnar.play()
-		$Player.can_move = 0
-		await get_tree().create_timer(5.0).timeout
+		$HUD/Black.show()
+		$CanvasLayer/Control.hide()
+		await get_tree().create_timer(3.0).timeout
 		game_over()
 
 func _on_escape_3_area_entered(_area:Area2D):
@@ -90,13 +99,15 @@ func _on_escape_3_area_entered(_area:Area2D):
 		if (item != null):
 			itemCount += 1
 		$ScoreTimer.stop()
+		$Player.can_move = 0
 		$HUD.show_escaped3(itemCount)
 		$MainMusic.stop()
 		$PlayArea.hide()
 		$Path2D.set_process(false)
 		$ur_winnar.play()
-		$Player.can_move = 0
-		await get_tree().create_timer(5.0).timeout
+		$HUD/Black.show()
+		$CanvasLayer/Control.hide()
+		await get_tree().create_timer(3.0).timeout
 		game_over()
 
 # handle the random voiceline
@@ -106,7 +117,7 @@ func _on_sfx_timer_timeout():
 		$Player/cameraman.play()
 		$HUD.show_sub_message_no_timer('You: "This stupid cameraman, what an idiot! Now I have to go back and look for him in the terribly scary place..."')
 		# custom timer cuz this line is very long
-		await get_tree().create_timer(5.0).timeout
+		await get_tree().create_timer(10.0).timeout
 		$HUD/SubMessage.hide()
 	if (i == 2) :
 		$Player/hungry.play()
@@ -164,4 +175,14 @@ func _input(_event):
 
 # called if player gets within mob detection radius
 func _on_player_detected():
-	$HUD.show_start_message("JUMPSCARE!") # replace with actual jumpscare
+	$HUD.show_start_message("GAME OVER!") # replace with actual jumpscare
+	$HUD/Jumpscare.show()
+	$HUD/Black.show()
+	$CanvasLayer/Control.hide()
+	AudioServer.set_bus_mute(2, true)
+	$Player/Jumpscare.play()
+	$Path2D/PathFollow2D/Mob.speed = 0
+	$Player.can_move = 0
+	$HUD/SubMessage.queue_free()
+	await get_tree().create_timer(6.0).timeout
+	get_tree().quit()

@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bomnm0yy52msj"]
+[gd_scene load_steps=11 format=3 uid="uid://bomnm0yy52msj"]
 
 [ext_resource type="Script" path="res://hud.gd" id="1_3ot6e"]
 [ext_resource type="FontFile" uid="uid://bqcqxruflev4m" path="res://fonts/Xolonium-Regular.ttf" id="2_ilooq"]
 [ext_resource type="FontFile" uid="uid://dgaoc8c7xonhl" path="res://fonts/TooMuchInk.ttf" id="3_65jik"]
+[ext_resource type="Texture2D" uid="uid://maoxag21led4" path="res://art/sm_knife.png" id="4_xxpna"]
+[ext_resource type="Texture2D" uid="uid://dryxo0t6frid0" path="res://art/black.jpg" id="5_b53qn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3jv6w"]
 line_spacing = 10.0
@@ -14,10 +16,15 @@ action = &"start_game"
 [sub_resource type="Shortcut" id="Shortcut_0fcbf"]
 events = [SubResource("InputEventAction_jcw4u")]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2u6he"]
+
+[sub_resource type="Theme" id="Theme_aaxin"]
+
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_3ot6e")
 
 [node name="ScoreLabel" type="Label" parent="."]
+z_index = 100
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -32,6 +39,7 @@ text = "0"
 horizontal_alignment = 1
 
 [node name="Message" type="Label" parent="."]
+z_index = 100
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -51,6 +59,7 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="HelpMessage" type="Label" parent="."]
+z_index = 100
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -76,6 +85,7 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="SubMessage" type="Label" parent="."]
+z_index = 100
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.645
@@ -155,6 +165,82 @@ theme_override_fonts/font = ExtResource("3_65jik")
 theme_override_font_sizes/font_size = 64
 shortcut_in_tooltip = false
 text = "Quit"
+
+[node name="EndingMessage" type="Label" parent="."]
+z_index = 100
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -872.0
+offset_top = -279.0
+offset_right = 864.0
+offset_bottom = 321.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_65jik")
+theme_override_font_sizes/font_size = 48
+text = "a
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="EscToQuit" type="Label" parent="."]
+z_index = 100
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -859.0
+offset_top = 431.0
+offset_right = 877.0
+offset_bottom = 1031.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_65jik")
+theme_override_font_sizes/font_size = 48
+text = "Press 'Esc' to quit.
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Exposition" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -863.0
+offset_top = -107.0
+offset_right = 873.0
+offset_bottom = 493.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_65jik")
+theme_override_font_sizes/font_size = 48
+text = " You're an influencer. You and your camera guy are visiting an abandoned mansion to film. After wandering around a bit, you take a break by a pool, molded and drained out. Suddenly, you hear a scream as your companion is dragged away by a figure dressed in dark colours. What's going on?? It seems like you have no choice but to investigate.
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Jumpscare" type="TextureRect" parent="."]
+z_index = 99
+offset_left = 419.0
+offset_top = -2.0
+offset_right = 519.0
+offset_bottom = 98.0
+scale = Vector2(10.8, 10.8)
+texture = ExtResource("4_xxpna")
+
+[node name="Black" type="TextureRect" parent="."]
+z_index = 98
+material = SubResource("CanvasItemMaterial_2u6he")
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = SubResource("Theme_aaxin")
+texture = ExtResource("5_b53qn")
 
 [connection signal="timeout" from="MessageTimer" to="." method="_on_message_timer_timeout"]
 [connection signal="timeout" from="SubMessageTimer" to="." method="_on_sub_message_timer_timeout"]
