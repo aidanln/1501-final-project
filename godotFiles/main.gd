@@ -35,7 +35,7 @@ func _process(_delta):
 
 # called when player hits the butler or they win
 func game_over():
-	$HUD/SubMessage.queue_free()
+	$HUD/SubMessage.hide()
 	AudioServer.set_bus_mute(2, true)
 	$ScoreTimer.stop()
 	#$HUD.show_game_over()
