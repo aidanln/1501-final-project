@@ -38,12 +38,12 @@ height = 140.0
 radius = 30.0
 height = 140.0
 
-[sub_resource type="Gradient" id="Gradient_ralpo"]
+[sub_resource type="Gradient" id="Gradient_jvden"]
 offsets = PackedFloat32Array(0, 0.694805)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_31pxp"]
-gradient = SubResource("Gradient_ralpo")
+gradient = SubResource("Gradient_jvden")
 fill = 1
 fill_from = Vector2(0.486239, 0.5)
 
